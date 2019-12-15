@@ -1,10 +1,15 @@
 #include "constants/global.h"
 #include "constants/apprentice.h"
 #include "constants/battle.h"
+#include "constants/battle_arena.h"
+#include "constants/battle_dome.h"
+#include "constants/battle_factory.h"
 #include "constants/battle_frontier.h"
+#include "constants/battle_palace.h"
 #include "constants/battle_pike.h"
 #include "constants/battle_pyramid.h"
 #include "constants/battle_setup.h"
+#include "constants/battle_tent.h"
 #include "constants/battle_tower.h"
 #include "constants/berry.h"
 #include "constants/cable_club.h"
@@ -81,16 +86,16 @@ gSpecialVars:: @ 81DBA0C
 	.include "data/specials.inc"
 
 gStdScripts:: @ 81DC2A0
-	.4byte Std_ObtainItem
-	.4byte Std_FindItem
-	.4byte Std_MsgboxNPC
-	.4byte Std_MsgboxSign
-	.4byte Std_MsgboxDefault
-	.4byte Std_MsgboxYesNo
-	.4byte Std_MsgboxAutoclose
-	.4byte Std_ObtainDecoration
-	.4byte Std_RegisteredInMatchCall
-	.4byte Std_MsgboxGetPoints
+	.4byte Std_ObtainItem              @ STD_OBTAIN_ITEM
+	.4byte Std_FindItem                @ STD_FIND_ITEM
+	.4byte Std_MsgboxNPC               @ MSGBOX_NPC
+	.4byte Std_MsgboxSign              @ MSGBOX_SIGN
+	.4byte Std_MsgboxDefault           @ MSGBOX_DEFAULT
+	.4byte Std_MsgboxYesNo             @ MSGBOX_YESNO
+	.4byte Std_MsgboxAutoclose         @ MSGBOX_AUTOCLOSE
+	.4byte Std_ObtainDecoration        @ STD_OBTAIN_DECORATION
+	.4byte Std_RegisteredInMatchCall   @ STD_REGISTER_MATCH_CALL
+	.4byte Std_MsgboxGetPoints         @ MSGBOX_GETPOINTS
 	.4byte Std_10
 gStdScripts_End:: @ 81DC2CC
 
@@ -451,21 +456,6 @@ gStdScripts_End:: @ 81DC2CC
 	.include "data/maps/SSTidalLowerDeck/scripts.inc"
 	.include "data/maps/SSTidalRooms/scripts.inc"
 	.include "data/maps/BattlePyramidSquare01/scripts.inc"
-	.include "data/maps/BattlePyramidSquare02/scripts.inc"
-	.include "data/maps/BattlePyramidSquare03/scripts.inc"
-	.include "data/maps/BattlePyramidSquare04/scripts.inc"
-	.include "data/maps/BattlePyramidSquare05/scripts.inc"
-	.include "data/maps/BattlePyramidSquare06/scripts.inc"
-	.include "data/maps/BattlePyramidSquare07/scripts.inc"
-	.include "data/maps/BattlePyramidSquare08/scripts.inc"
-	.include "data/maps/BattlePyramidSquare09/scripts.inc"
-	.include "data/maps/BattlePyramidSquare10/scripts.inc"
-	.include "data/maps/BattlePyramidSquare11/scripts.inc"
-	.include "data/maps/BattlePyramidSquare12/scripts.inc"
-	.include "data/maps/BattlePyramidSquare13/scripts.inc"
-	.include "data/maps/BattlePyramidSquare14/scripts.inc"
-	.include "data/maps/BattlePyramidSquare15/scripts.inc"
-	.include "data/maps/BattlePyramidSquare16/scripts.inc"
 	.include "data/maps/UnionRoom/scripts.inc"
 	.include "data/maps/SafariZone_Northwest/scripts.inc"
 	.include "data/maps/SafariZone_North/scripts.inc"
@@ -493,7 +483,7 @@ gStdScripts_End:: @ 81DC2CC
 	.include "data/maps/BattleFrontier_BattlePalaceCorridor/scripts.inc"
 	.include "data/maps/BattleFrontier_BattlePalaceBattleRoom/scripts.inc"
 	.include "data/maps/BattleFrontier_BattlePyramidLobby/scripts.inc"
-	.include "data/maps/BattleFrontier_BattlePyramidEmptySquare/scripts.inc"
+	.include "data/maps/BattleFrontier_BattlePyramidFloor/scripts.inc"
 	.include "data/maps/BattleFrontier_BattlePyramidTop/scripts.inc"
 	.include "data/maps/BattleFrontier_BattleArenaLobby/scripts.inc"
 	.include "data/maps/BattleFrontier_BattleArenaCorridor/scripts.inc"
@@ -773,8 +763,8 @@ Common_EventScript_NoRoomForDecor:: @ 8272071
 	msgbox gText_NoRoomLeftForAnother, MSGBOX_DEFAULT
 	return
 
-Common_EventScript_SetAlternatingWeather:: @ 827207A
-	setweather WEATHER_ALTERNATING
+Common_EventScript_SetAbnormalWeather:: @ 827207A
+	setweather WEATHER_ABNORMAL
 	return
 
 Common_EventScript_PlayGymBadgeFanfare:: @ 827207E
@@ -1022,7 +1012,7 @@ gText_LegendaryFlewAway:: @ 8273204
 
 	.include "data/text/pc_transfer.inc"
 	.include "data/text/mevent.inc"
-	.include "data/text/unusual_weather.inc"
+	.include "data/text/abnormal_weather.inc"
 
 EventScript_SelectWithoutRegisteredItem:: @ 82736B3
 	msgbox gText_SelectWithoutRegisteredItem, MSGBOX_SIGN
@@ -1072,7 +1062,7 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/mevent.inc"
-	.include "data/scripts/unusual_weather.inc"
+	.include "data/scripts/abnormal_weather.inc"
 	.include "data/scripts/trainer_script.inc"
 	.include "data/scripts/berry_tree.inc"
 	.include "data/scripts/secret_base.inc"

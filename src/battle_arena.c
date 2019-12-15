@@ -20,6 +20,7 @@
 #include "text.h"
 #include "util.h"
 #include "constants/songs.h"
+#include "constants/battle_arena.h"
 #include "constants/battle_string_ids.h"
 #include "constants/battle_frontier.h"
 #include "constants/frontier_util.h"
@@ -31,9 +32,9 @@
 static void InitArenaChallenge(void);
 static void GetArenaData(void);
 static void SetArenaData(void);
-static void sub_81A5AC4(void);
-static void SetArenaRewardItem(void);
-static void GiveArenaRewardItem(void);
+static void SaveArenaChallenge(void);
+static void SetArenaPrize(void);
+static void GiveArenaPrize(void);
 static void BufferArenaOpponentName(void);
 static void SpriteCb_JudgmentIcon(struct Sprite *sprite);
 static void ShowJudgmentSprite(u8 x, u8 y, u8 category, u8 battler);
@@ -403,10 +404,10 @@ static const s8 sMindRatings[] =
 static const struct OamData sJudgementIconOamData =
 {
     .y = 0,
-    .affineMode = 0,
-    .objMode = 0,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
-    .bpp = 0,
+    .bpp = ST_OAM_4BPP,
     .shape = SPRITE_SHAPE(16x16),
     .x = 0,
     .matrixNum = 0,
@@ -468,16 +469,16 @@ static const struct CompressedSpriteSheet sBattleArenaJudgementSymbolsSpriteShee
 
 static void (* const sArenaFunctions[])(void) =
 {
-    InitArenaChallenge,
-    GetArenaData,
-    SetArenaData,
-    sub_81A5AC4,
-    SetArenaRewardItem,
-    GiveArenaRewardItem,
-    BufferArenaOpponentName,
+    [BATTLE_ARENA_FUNC_INIT]             = InitArenaChallenge,
+    [BATTLE_ARENA_FUNC_GET_DATA]         = GetArenaData,
+    [BATTLE_ARENA_FUNC_SET_DATA]         = SetArenaData,
+    [BATTLE_ARENA_FUNC_SAVE]             = SaveArenaChallenge,
+    [BATTLE_ARENA_FUNC_SET_PRIZE]        = SetArenaPrize,
+    [BATTLE_ARENA_FUNC_GIVE_PRIZE]       = GiveArenaPrize,
+    [BATTLE_ARENA_FUNC_GET_TRAINER_NAME] = BufferArenaOpponentName,
 };
 
-static const u16 sShortStreakRewardItems[] =
+static const u16 sShortStreakPrizeItems[] =
 {
     ITEM_HP_UP,
     ITEM_PROTEIN,
@@ -487,7 +488,7 @@ static const u16 sShortStreakRewardItems[] =
     ITEM_ZINC,
 };
 
-static const u16 sLongStreakRewardItems[] =
+static const u16 sLongStreakPrizeItems[] =
 {
     ITEM_BRIGHT_POWDER,
     ITEM_WHITE_HERB,
@@ -563,8 +564,8 @@ u8 BattleArena_ShowJudgmentWindow(u8 *state)
         break;
     case 4:
         PlaySE(SE_HANTEI1);
-        ShowJudgmentSprite(80, 40, 0, 0);
-        ShowJudgmentSprite(160, 40, 0, 1);
+        ShowJudgmentSprite(80, 40, ARENA_CATEGORY_MIND, B_POSITION_PLAYER_LEFT);
+        ShowJudgmentSprite(160, 40, ARENA_CATEGORY_MIND, B_POSITION_OPPONENT_LEFT);
         BattleStringExpandPlaceholdersToDisplayedString(gText_Judgement);
         BattlePutTextOnWindow(gDisplayedStringBattle, 21);
         (*state)++;
@@ -572,8 +573,8 @@ u8 BattleArena_ShowJudgmentWindow(u8 *state)
         break;
     case 5:
         PlaySE(SE_HANTEI1);
-        ShowJudgmentSprite(80, 56, 1, 0);
-        ShowJudgmentSprite(160, 56, 1, 1);
+        ShowJudgmentSprite(80, 56, ARENA_CATEGORY_SKILL, B_POSITION_PLAYER_LEFT);
+        ShowJudgmentSprite(160, 56, ARENA_CATEGORY_SKILL, B_POSITION_OPPONENT_LEFT);
         BattleStringExpandPlaceholdersToDisplayedString(gText_Judgement);
         BattlePutTextOnWindow(gDisplayedStringBattle, 21);
         (*state)++;
@@ -581,8 +582,8 @@ u8 BattleArena_ShowJudgmentWindow(u8 *state)
         break;
     case 6:
         PlaySE(SE_HANTEI1);
-        ShowJudgmentSprite(80, 72, 2, 0);
-        ShowJudgmentSprite(160, 72, 2, 1);
+        ShowJudgmentSprite(80, 72, ARENA_CATEGORY_BODY, B_POSITION_PLAYER_LEFT);
+        ShowJudgmentSprite(160, 72, ARENA_CATEGORY_BODY, B_POSITION_OPPONENT_LEFT);
         BattleStringExpandPlaceholdersToDisplayedString(gText_Judgement);
         BattlePutTextOnWindow(gDisplayedStringBattle, 21);
         (*state)++;
@@ -642,15 +643,15 @@ static void ShowJudgmentSprite(u8 x, u8 y, u8 category, u8 battler)
 
     switch (category)
     {
-    case 0:
+    case ARENA_CATEGORY_MIND:
         pointsPlayer = mindPoints[battler];
         pointsOpponent = mindPoints[BATTLE_OPPOSITE(battler)];
         break;
-    case 1:
+    case ARENA_CATEGORY_SKILL:
         pointsPlayer = skillPoints[battler];
         pointsOpponent = skillPoints[BATTLE_OPPOSITE(battler)];
         break;
-    case 2:
+    case ARENA_CATEGORY_BODY:
         pointsPlayer = (gBattleMons[battler].hp * 100) / hpAtStart[battler];
         pointsOpponent = (gBattleMons[BATTLE_OPPOSITE(battler)].hp * 100) / hpAtStart[BATTLE_OPPOSITE(battler)];
         break;
@@ -809,13 +810,13 @@ static void GetArenaData(void)
 
     switch (gSpecialVar_0x8005)
     {
-    case 0:
-        gSpecialVar_Result = gSaveBlock2Ptr->frontier.arenaRewardItem;
+    case ARENA_DATA_PRIZE:
+        gSpecialVar_Result = gSaveBlock2Ptr->frontier.arenaPrize;
         break;
-    case 1:
+    case ARENA_DATA_WIN_STREAK:
         gSpecialVar_Result = gSaveBlock2Ptr->frontier.arenaWinStreaks[lvlMode];
         break;
-    case 2:
+    case ARENA_DATA_WIN_STREAK_ACTIVE:
         if (lvlMode != FRONTIER_LVL_50)
             gSpecialVar_Result = gSaveBlock2Ptr->frontier.winStreakActiveFlags & STREAK_ARENA_OPEN;
         else
@@ -830,13 +831,13 @@ static void SetArenaData(void)
 
     switch (gSpecialVar_0x8005)
     {
-    case 0:
-        gSaveBlock2Ptr->frontier.arenaRewardItem = gSpecialVar_0x8006;
+    case ARENA_DATA_PRIZE:
+        gSaveBlock2Ptr->frontier.arenaPrize = gSpecialVar_0x8006;
         break;
-    case 1:
+    case ARENA_DATA_WIN_STREAK:
         gSaveBlock2Ptr->frontier.arenaWinStreaks[lvlMode] = gSpecialVar_0x8006;
         break;
-    case 2:
+    case ARENA_DATA_WIN_STREAK_ACTIVE:
         if (lvlMode != FRONTIER_LVL_50)
         {
             if (gSpecialVar_0x8006)
@@ -855,7 +856,7 @@ static void SetArenaData(void)
     }
 }
 
-static void sub_81A5AC4(void)
+static void SaveArenaChallenge(void)
 {
     gSaveBlock2Ptr->frontier.challengeStatus = gSpecialVar_0x8005;
     VarSet(VAR_TEMP_0, 0);
@@ -863,22 +864,22 @@ static void sub_81A5AC4(void)
     SaveGameFrontier();
 }
 
-static void SetArenaRewardItem(void)
+static void SetArenaPrize(void)
 {
     u32 lvlMode = gSaveBlock2Ptr->frontier.lvlMode;
 
     if (gSaveBlock2Ptr->frontier.arenaWinStreaks[lvlMode] > 41)
-        gSaveBlock2Ptr->frontier.arenaRewardItem = sLongStreakRewardItems[Random() % ARRAY_COUNT(sLongStreakRewardItems)];
+        gSaveBlock2Ptr->frontier.arenaPrize = sLongStreakPrizeItems[Random() % ARRAY_COUNT(sLongStreakPrizeItems)];
     else
-        gSaveBlock2Ptr->frontier.arenaRewardItem = sShortStreakRewardItems[Random() % ARRAY_COUNT(sShortStreakRewardItems)];
+        gSaveBlock2Ptr->frontier.arenaPrize = sShortStreakPrizeItems[Random() % ARRAY_COUNT(sShortStreakPrizeItems)];
 }
 
-static void GiveArenaRewardItem(void)
+static void GiveArenaPrize(void)
 {
-    if (AddBagItem(gSaveBlock2Ptr->frontier.arenaRewardItem, 1) == TRUE)
+    if (AddBagItem(gSaveBlock2Ptr->frontier.arenaPrize, 1) == TRUE)
     {
-        CopyItemName(gSaveBlock2Ptr->frontier.arenaRewardItem, gStringVar1);
-        gSaveBlock2Ptr->frontier.arenaRewardItem = 0;
+        CopyItemName(gSaveBlock2Ptr->frontier.arenaPrize, gStringVar1);
+        gSaveBlock2Ptr->frontier.arenaPrize = ITEM_NONE;
         gSpecialVar_Result = TRUE;
     }
     else

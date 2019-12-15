@@ -40,8 +40,7 @@ FallarborTown_BattleTentBattleRoom_EventScript_2008E7:: @ 82008E7
 	goto_if_ne FallarborTown_BattleTentBattleRoom_EventScript_200B73
 
 FallarborTown_BattleTentBattleRoom_EventScript_20090F:: @ 820090F
-	setvar VAR_0x8004, BATTLE_TOWER_FUNC_CHOOSE_TRAINER
-	special CallBattleTowerFunc
+	tower_setopponent
 	addobject 3
 	applymovement 3, FallarborTown_BattleTentBattleRoom_Movement_200B96
 	waitmovement 0
@@ -49,21 +48,19 @@ FallarborTown_BattleTentBattleRoom_EventScript_20090F:: @ 820090F
 	playse SE_W187
 	waitse
 	waitmovement 0
-	msgbox FallarborTown_BattleTentBattleRoom_Text_257C93, MSGBOX_DEFAULT
-	setvar VAR_0x8004, 4
-	special CallVerdanturfTentFunction
+	msgbox BattleFrontier_BattleArenaBattleRoom_Text_SetKOTourneyBegin, MSGBOX_DEFAULT
+	battletent_getopponentintro
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	waitmessage
-	call FallarborTown_BattleTentBattleRoom_EventScript_257B6C
+	call BattleFrontier_BattleArenaBattleRoom_EventScript_DoArenaBattle
 	switch VAR_RESULT
 	case 1, FallarborTown_BattleTentBattleRoom_EventScript_20099C
 	applymovement 2, FallarborTown_BattleTentBattleRoom_Movement_200BA3
 	playse SE_W173
 	waitse
 	waitmovement 0
-	setvar VAR_0x8004, 6
-	special CallFallarborTentFunction
-	msgbox FallarborTown_BattleTentBattleRoom_Text_257CCE, MSGBOX_DEFAULT
+	fallarbortent_getopponentname
+	msgbox BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsOpponent, MSGBOX_DEFAULT
 
 FallarborTown_BattleTentBattleRoom_EventScript_20097E:: @ 820097E
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST
@@ -76,7 +73,7 @@ FallarborTown_BattleTentBattleRoom_EventScript_20099C:: @ 820099C
 	playse SE_BAN
 	waitse
 	waitmovement 0
-	msgbox FallarborTown_BattleTentBattleRoom_Text_257CB3, MSGBOX_DEFAULT
+	msgbox BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsPlayer, MSGBOX_DEFAULT
 	closemessage
 
 FallarborTown_BattleTentBattleRoom_EventScript_2009B3:: @ 82009B3
@@ -92,7 +89,7 @@ FallarborTown_BattleTentBattleRoom_EventScript_2009B3:: @ 82009B3
 	waitmovement 0
 	applymovement 1, FallarborTown_BattleTentBattleRoom_Movement_200B94
 	waitmovement 0
-	msgbox FallarborTown_BattleTentBattleRoom_Text_257CE9, MSGBOX_DEFAULT
+	msgbox BattleFrontier_BattleArenaBattleRoom_Text_MonsWillBeRestored, MSGBOX_DEFAULT
 	special LoadPlayerParty
 	special SavePlayerParty
 	frontier_setpartyorder FRONTIER_PARTY_SIZE
@@ -113,14 +110,14 @@ FallarborTown_BattleTentBattleRoom_EventScript_200A2A:: @ 8200A2A
 	case 2, FallarborTown_BattleTentBattleRoom_EventScript_200AA6
 
 FallarborTown_BattleTentBattleRoom_EventScript_200A78:: @ 8200A78
-	msgbox FallarborTown_BattleTentBattleRoom_Text_257E6B, MSGBOX_YESNO
+	msgbox BattleFrontier_BattleArenaBattleRoom_Text_SaveAndShutDown, MSGBOX_YESNO
 	switch VAR_RESULT
 	case NO, FallarborTown_BattleTentBattleRoom_EventScript_200A2A
 	case YES, FallarborTown_BattleTentBattleRoom_EventScript_200B51
 	case MULTI_B_PRESSED, FallarborTown_BattleTentBattleRoom_EventScript_200A2A
 
 FallarborTown_BattleTentBattleRoom_EventScript_200AA6:: @ 8200AA6
-	message FallarborTown_BattleTentBattleRoom_Text_257E9E
+	message BattleFrontier_BattleArenaBattleRoom_Text_RetireFromChallenge
 	waitmessage
 	multichoicedefault 20, 8, MULTI_YESNO, 1, 0
 	switch VAR_RESULT
@@ -143,33 +140,25 @@ FallarborTown_BattleTentBattleRoom_EventScript_200AF3:: @ 8200AF3
 	special LoadPlayerParty
 	warp MAP_FALLARBOR_TOWN_BATTLE_TENT_LOBBY, 255, 6, 6
 	waitstate
-	setvar VAR_0x8004, 1
-	setvar VAR_0x8005, 1
-	special CallBattleArenaFunction
+	arena_get ARENA_DATA_WIN_STREAK
 	compare VAR_RESULT, MAX_STREAK
 	goto_if_eq FallarborTown_BattleTentBattleRoom_EventScript_2009B3
 	addvar VAR_RESULT, 1
-	setvar VAR_0x8004, 2
-	setvar VAR_0x8005, 1
-	copyvar VAR_0x8006, VAR_RESULT
-	special CallBattleArenaFunction
-
+	arena_set ARENA_DATA_WIN_STREAK, VAR_RESULT
 FallarborTown_BattleTentBattleRoom_EventScript_200B43:: @ 8200B43
-	message FallarborTown_BattleTentBattleRoom_Text_257D17
+	message BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor2ndOpponent
 	waitmessage
 	return
 
 FallarborTown_BattleTentBattleRoom_EventScript_200B4A:: @ 8200B4A
-	message FallarborTown_BattleTentBattleRoom_Text_257D50
+	message BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor3rdOpponent
 	waitmessage
 	return
 
 FallarborTown_BattleTentBattleRoom_EventScript_200B51:: @ 8200B51
-	message FallarborTown_BattleTentBattleRoom_Text_257EDB
+	message BattleFrontier_BattleArenaBattleRoom_Text_SavingPleaseWait
 	waitmessage
-	setvar VAR_0x8004, 3
-	setvar VAR_0x8005, 2
-	special CallFallarborTentFunction
+	fallarbortent_save CHALLENGE_STATUS_PAUSED
 	playse SE_SAVE
 	waitse
 	fadescreen 1

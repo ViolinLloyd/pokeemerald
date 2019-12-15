@@ -39,7 +39,7 @@ EWRAM_DATA struct PyramidBagCursorData gPyramidBagCursorData = {0};
 
 // This file's functions.
 static void Task_HandlePyramidBagInput(u8 taskId);
-static void sub_81C4F44(u8 taskId);
+static void Task_ChooseItemsToTossFromPyramidBag(u8 taskId);
 static void sub_81C5B4C(u8 taskId);
 static void Task_BeginItemSwap(u8 taskId);
 static void sub_81C5D20(u8 taskId);
@@ -278,10 +278,10 @@ static const struct WindowTemplate gUnknown_0861F350[] =
 static const struct OamData gOamData_861F378 =
 {
     .y = 0,
-    .affineMode = 1,
-    .objMode = 0,
+    .affineMode = ST_OAM_AFFINE_NORMAL,
+    .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
-    .bpp = 0,
+    .bpp = ST_OAM_4BPP,
     .shape = SPRITE_SHAPE(64x64),
     .x = 0,
     .matrixNum = 0,
@@ -354,14 +354,14 @@ static void sub_81C4F10(void)
     GoToBattlePyramidBagMenu(1, CB2_SetUpReshowBattleScreenAfterMenu2);
 }
 
-void sub_81C4F24(void)
+void ChooseItemsToTossFromPyramidBag(void)
 {
     ScriptContext2_Enable();
     FadeScreen(1, 0);
-    CreateTask(sub_81C4F44, 10);
+    CreateTask(Task_ChooseItemsToTossFromPyramidBag, 10);
 }
 
-static void sub_81C4F44(u8 taskId)
+static void Task_ChooseItemsToTossFromPyramidBag(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
@@ -589,7 +589,7 @@ static void PyramidBag_CopyItemName(u8 *dst, u16 itemId)
     {
         ConvertIntToDecimalStringN(gStringVar1, ITEM_TO_BERRY(itemId), STR_CONV_MODE_LEADING_ZEROS, 2);
         CopyItemName(itemId, gStringVar2);
-        StringExpandPlaceholders(dst, gText_UnkF908Var1Clear7Var2);
+        StringExpandPlaceholders(dst, gText_NumberVar1Clear7Var2);
     }
     else
     {

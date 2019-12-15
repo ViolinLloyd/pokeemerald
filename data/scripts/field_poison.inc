@@ -29,16 +29,14 @@ EventScript_FrontierFieldWhiteOut:: @ 82736F8
 	message gText_PlayerWhitedOut
 	waitmessage
 	waitbuttonpress
-	setvar VAR_0x8004, BATTLE_PIKE_FUNC_IS_IN
-	special CallBattlePikeFunction
-	compare VAR_RESULT, 1
+	pike_inchallenge
+	compare VAR_RESULT, TRUE
 	goto_if_eq BattleFrontier_BattlePike_EventScript_Retire
-	setvar VAR_0x8004, BATTLE_PYRAMID_FUNC_IS_IN
-	special CallBattlePyramidFunction
-	compare VAR_RESULT, 1
-	goto_if_eq BattleFrontier_BattlePyramidTop_EventScript_252B42
-	compare VAR_RESULT, 2
-	goto_if_eq BattleFrontier_BattlePyramidTop_EventScript_252B42
+	pyramid_inchallenge
+	compare VAR_RESULT, 1  @ On Pyramid floor
+	goto_if_eq BattleFrontier_BattlePyramid_EventScript_WarpToLobbyLost
+	compare VAR_RESULT, 2  @ On Pyramid peak
+	goto_if_eq BattleFrontier_BattlePyramid_EventScript_WarpToLobbyLost
 	trainerhill_inchallenge
 	compare VAR_RESULT, TRUE
 	goto_if_eq TrainerHill_1F_EventScript_Lost

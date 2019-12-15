@@ -256,7 +256,7 @@ gSpecials:: @ 81DBA64
 	def_special CallVerdanturfTentFunction
 	def_special CallFallarborTentFunction
 	def_special CallSlateportTentFunction
-	def_special sub_80F9490
+	def_special ChoosePartyForBattleFrontier
 	def_special ValidateEReaderTrainer
 	def_special GetBestBattleTowerStreak
 	def_special ReducePlayerPartyToSelectedMons
@@ -458,7 +458,7 @@ gSpecials:: @ 81DBA64
 	def_special sub_813A630
 	def_special BufferBattleTowerElevatorFloors
 	def_special TryStoreHeldItemsInPyramidBag
-	def_special sub_81C4F24
+	def_special ChooseItemsToTossFromPyramidBag
 	def_special DoBattlePyramidMonsHaveHeldItem
 	def_special BattlePyramidChooseMonHeldItems
 	def_special SetBattleTowerLinkPlayerGfx
@@ -499,8 +499,8 @@ gSpecials:: @ 81DBA64
 	def_special ShouldShowBoxWasFullMessage
 	def_special SetMatchCallRegisteredFlag
 	def_special sub_8175280
-	def_special CreateUnusualWeatherEvent
-	def_special GetUnusualWeatherMapNameAndType
+	def_special CreateAbnormalWeatherEvent
+	def_special GetAbnormalWeatherMapNameAndType
 	def_special GetMartEmployeeObjectEventId
 	def_special sub_80A08CC
 	def_special Unused_SetWeatherSunny
