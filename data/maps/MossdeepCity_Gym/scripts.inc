@@ -207,62 +207,62 @@ MossdeepCity_Gym_EventScript_WarpToEntrance:: @ 8220AF1
 	end
 
 MossdeepCity_Gym_EventScript_Preston:: @ 8220AFD
-	trainerbattle_single TRAINER_PRESTON, MossdeepCity_Gym_Text_PrestonPreBattle, MossdeepCity_Gym_Text_PrestonDefeat
+	trainerbattle_double TRAINER_PRESTON, MossdeepCity_Gym_Text_PrestonPreBattle, MossdeepCity_Gym_Text_PrestonDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_PrestonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Virgil:: @ 8220B14
-	trainerbattle_single TRAINER_VIRGIL, MossdeepCity_Gym_Text_VirgilPreBattle, MossdeepCity_Gym_Text_VirgilDefeat
+	trainerbattle_double TRAINER_VIRGIL, MossdeepCity_Gym_Text_VirgilPreBattle, MossdeepCity_Gym_Text_VirgilDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_VirgilPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Blake:: @ 8220B2B
-	trainerbattle_single TRAINER_BLAKE, MossdeepCity_Gym_Text_BlakePreBattle, MossdeepCity_Gym_Text_BlakeDefeat
+	trainerbattle_double TRAINER_BLAKE, MossdeepCity_Gym_Text_BlakePreBattle, MossdeepCity_Gym_Text_BlakeDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_BlakePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Hannah:: @ 8220B42
-	trainerbattle_single TRAINER_HANNAH, MossdeepCity_Gym_Text_HannahPreBattle, MossdeepCity_Gym_Text_HannahDefeat
+	trainerbattle_double TRAINER_HANNAH, MossdeepCity_Gym_Text_HannahPreBattle, MossdeepCity_Gym_Text_HannahDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_HannahPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Samantha:: @ 8220B59
-	trainerbattle_single TRAINER_SAMANTHA, MossdeepCity_Gym_Text_SamanthaPreBattle, MossdeepCity_Gym_Text_SamanthaDefeat
+	trainerbattle_double TRAINER_SAMANTHA, MossdeepCity_Gym_Text_SamanthaPreBattle, MossdeepCity_Gym_Text_SamanthaDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_SamanthaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Maura:: @ 8220B70
-	trainerbattle_single TRAINER_MAURA, MossdeepCity_Gym_Text_MauraPreBattle, MossdeepCity_Gym_Text_MauraDefeat
+	trainerbattle_double TRAINER_MAURA, MossdeepCity_Gym_Text_MauraPreBattle, MossdeepCity_Gym_Text_MauraDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_MauraPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Sylvia:: @ 8220B87
-	trainerbattle_single TRAINER_SYLVIA, MossdeepCity_Gym_Text_SylviaPreBattle, MossdeepCity_Gym_Text_SylviaDefeat
+	trainerbattle_double TRAINER_SYLVIA, MossdeepCity_Gym_Text_SylviaPreBattle, MossdeepCity_Gym_Text_SylviaDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_SylviaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Nate:: @ 8220B9E
-	trainerbattle_single TRAINER_NATE, MossdeepCity_Gym_Text_NatePreBattle, MossdeepCity_Gym_Text_NateDefeat
+	trainerbattle_double TRAINER_NATE, MossdeepCity_Gym_Text_NatePreBattle, MossdeepCity_Gym_Text_NateDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_NatePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Macey:: @ 8220BB5
-	trainerbattle_single TRAINER_MACEY, MossdeepCity_Gym_Text_MaceyPreBattle, MossdeepCity_Gym_Text_MaceyDefeat
+	trainerbattle_double TRAINER_MACEY, MossdeepCity_Gym_Text_MaceyPreBattle, MossdeepCity_Gym_Text_MaceyDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_MaceyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Clifford:: @ 8220BCC
-	trainerbattle_single TRAINER_CLIFFORD, MossdeepCity_Gym_Text_CliffordPreBattle, MossdeepCity_Gym_Text_CliffordDefeat
+	trainerbattle_double TRAINER_CLIFFORD, MossdeepCity_Gym_Text_CliffordPreBattle, MossdeepCity_Gym_Text_CliffordDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_CliffordPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Nicholas:: @ 8220BE3
-	trainerbattle_single TRAINER_NICHOLAS, MossdeepCity_Gym_Text_NicholasPreBattle, MossdeepCity_Gym_Text_NicholasDefeat
+	trainerbattle_double TRAINER_NICHOLAS, MossdeepCity_Gym_Text_NicholasPreBattle, MossdeepCity_Gym_Text_NicholasDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_NicholasPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Kathleen:: @ 8220BFA
-	trainerbattle_single TRAINER_KATHLEEN, MossdeepCity_Gym_Text_KathleenPreBattle, MossdeepCity_Gym_Text_KathleenDefeat
+	trainerbattle_double TRAINER_KATHLEEN, MossdeepCity_Gym_Text_KathleenPreBattle, MossdeepCity_Gym_Text_KathleenDefeat, MossdeepCity_Gym_Text_GymTrainerNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_KathleenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -370,7 +370,7 @@ MossdeepCity_Gym_EventScript_RedFloorSwitch:: @ 8220CBF
 MossdeepCity_Gym_Text_GymGuideAdvice: @ 8220CD5
 	.string "Yo, how's it going, CHAMPION-bound\n"
 	.string "{PLAYER}?\p"
-	.string "The GYM LEADERS here use\n"
+	.string "The GYM LEADERS and TRAINERS here use\n"
 	.string "PSYCHIC-type POKéMON.\p"
 	.string "If you go up against them with\n"
 	.string "FIGHTING- or POISON-type POKéMON,\l"
@@ -406,8 +406,8 @@ MossdeepCity_Gym_Text_VirgilDefeat: @ 8220F1A
 MossdeepCity_Gym_Text_VirgilPostBattle: @ 8220F3A
 	.string "If there are prodigies in the world,\n"
 	.string "then our GYM LEADERS are them!\p"
-	.string "However, you may be even more talented\n"
-	.string "than them…$"
+	.string "Their talent has even been recognized\n"
+	.string "by certain LEGENDARY POKéMON!$"
 
 MossdeepCity_Gym_Text_BlakePreBattle: @ 8220FB0
 	.string "Fufufufu… Watch me levitate a POKé\n"
@@ -524,29 +524,30 @@ MossdeepCity_Gym_Text_CliffordPostBattle: @ 82215E2
 	.string "your youthful energy.$"
 
 MossdeepCity_Gym_Text_MaceyPreBattle: @ 822161B
-	.string "You're not getting through to the end!\n"
-	.string "Not if I can help it!$"
+	.string "Yin and yang… land and sea…\n"
+	.string "people and POKéMON…\p"
+	.string "There are duos all throughout life!$"
 
 MossdeepCity_Gym_Text_MaceyDefeat: @ 8221658
-	.string "How could you be so ludicrously\n"
-	.string "strong?$"
+	.string "Victory and defeat…$"
 
 MossdeepCity_Gym_Text_MaceyPostBattle: @ 8221680
-	.string "Humph! You may be strong, but you're\n"
-	.string "not suitable for the PSYCHIC type!\p"
-	.string "The way you battle is somehow brutal!$"
+	.string "Our GYM LEADERS form a powerful duo.\p"
+	.string "And there are two LEGENDARY POKéMON\n"
+	.string "that form a powerful duo as well.\p"
+	.string "Fufufu… How will you fare against\n"
+	.string "this duo of duos?$"
 
 MossdeepCity_Gym_Text_NicholasPreBattle: @ 82216EE
-	.string "Wroooar! Have a taste of my super\n"
-	.string "POKéMON hard-battling power!$"
+	.string "I've seen your future… and\n"
+	.string "you're going to lose!$"
 
 MossdeepCity_Gym_Text_NicholasDefeat: @ 822172D
-	.string "Oh!\n"
-	.string "Done in!$"
+	.string "Oh no! It was my future!$"
 
 MossdeepCity_Gym_Text_NicholasPostBattle: @ 822173A
-	.string "All right! I think I'll develop a special\n"
-	.string "invincible POKéMON power next.$"
+	.string "My future is looking bright!\n"
+	.string "…Or is that your future?$"
 
 MossdeepCity_Gym_Text_TateAndLizaPreBattle: @ 8221783
 	.string "TATE: Hehehe… Were you surprised?\p"
@@ -649,3 +650,9 @@ MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons: @ 8221EB8
 	.string "LIZA: You brought just one POKéMON!\p"
 	.string "TATE: We need you to bring at least…\n"
 	.string "LIZA: Two POKéMON when you come back.$"
+
+MossdeepCity_Gym_Text_GymTrainerNeedTwoMons: @ who knows lol
+	.string "Here in the MOSSDEEP GYM, we all\n"
+	.string "engage in DOUBLE BATTLES!\p"
+	.string "Return when you have at least two\n"
+	.string "POKéMON with you!$"

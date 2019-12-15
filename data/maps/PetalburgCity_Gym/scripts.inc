@@ -1359,8 +1359,11 @@ PetalburgCity_Gym_Text_YouHaveGottenStronger: @ 8205F87
 	.string "that you've earned.$"
 
 PetalburgCity_Gym_Text_NormanPreBattle: @ 8205FE5
-	.string "DAD: Hm…\n"
-	.string "So, you did get four GYM BADGES.\p"
+	.string "DAD: Well, if it isn't {PLAYER}!\p"
+	.string "Tell me, how are you liking HOENN? It's\n"
+	.string "very different from JOHTO, isn't it?\p"
+	.string "Hm? What's that?\p"
+	.string "Hm… So, you did get four GYM BADGES.\p"
 	.string "Fine, as I promised, we will have\n"
 	.string "a POKéMON battle.\p"
 	.string "{PLAYER}…\p"
@@ -1471,8 +1474,8 @@ PetalburgCity_Gym_Text_RandallPostBattle: @ 82067D8
 	.string "ROOM.$"
 
 PetalburgCity_Gym_Text_RandallPostBadge: @ 820685E
-	.string "Whomever you beat, and whomever you\n"
-	.string "may lose to, you never shirk from\l"
+	.string "Whoever you beat, and to whomever\n"
+	.string "you may lose, never shirk from\l"
 	.string "training yourself and your POKéMON.\p"
 	.string "That's what I think being a\n"
 	.string "GYM LEADER is all about.$"
@@ -1498,9 +1501,7 @@ PetalburgCity_Gym_Text_GeorgePreBattle: @ 8206A1B
 	.string "Just when you think you're going to\n"
 	.string "win, your opponent restores HP…\p"
 	.string "Can you just imagine how awful that\n"
-	.string "must feel?\p"
-	.string "I'll show you exactly how awful it\n"
-	.string "feels!$"
+	.string "must feel?$"
 
 PetalburgCity_Gym_Text_GeorgeDefeat: @ 8206AB8
 	.string "I couldn't restore HP enough…\n"
@@ -1532,8 +1533,8 @@ PetalburgCity_Gym_Text_BerkeDefeat: @ 8206C7D
 PetalburgCity_Gym_Text_BerkePostBattle: @ 8206C9F
 	.string "Your father really is strong.\n"
 	.string "He's a TRAINER worth my respect.\p"
-	.string "And, I sense the same glow coming\n"
-	.string "from you as your father.\p"
+	.string "And I sense the same glow coming\n"
+	.string "from you as well.\p"
 	.string "I hope that you'll stage a terrific\n"
 	.string "battle with your father!$"
 

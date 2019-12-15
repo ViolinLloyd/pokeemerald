@@ -287,29 +287,31 @@ LavaridgeTown_Gym_B1F_Text_JacePostBattle: @ 81FEF07
 	.string "against our LEADER.$"
 
 LavaridgeTown_Gym_B1F_Text_JeffPreBattle: @ 81FEF60
-	.string "See how the flames blaze wildly?\n"
-	.string "They flare in anticipation of my win!$"
+	.string "A challenger! Finally!\n"
+	.string "I've been waiting for this!$"
 
 LavaridgeTown_Gym_B1F_Text_JeffDefeat: @ 81FEFA7
-	.string "Something didn't go right.$"
+	.string "Gah! Extinguished so quickly!$"
 
 LavaridgeTown_Gym_B1F_Text_JeffPostBattle: @ 81FEFC2
-	.string "Well, so what? I say so what?\n"
-	.string "I can walk on hot coals barefoot!\p"
-	.string "…Don't even think about trying it!$"
+	.string "You're the first TRAINER who's\n"
+	.string "challenged the GYM in a while.\p"
+	.string "You see, we've just reopened with\n"
+	.string "FLANNERY as our new GYM LEADER.$"
 
 LavaridgeTown_Gym_B1F_Text_EliPreBattle: @ 81FF025
-	.string "As much as I love mountains,\n"
-	.string "I especially love volcanoes.$"
+	.string "Do you want to know how FLANNERY\n"
+	.string "managed to become such a powerful\l"
+	.string "GYM LEADER at such an early age?$"
 
 LavaridgeTown_Gym_B1F_Text_EliDefeat: @ 81FF05F
-	.string "Well, it seems to me I lost without\n"
-	.string "ever being in control.$"
+	.string "You're quite the powerhouse as well!$"
 
 LavaridgeTown_Gym_B1F_Text_EliPostBattle: @ 81FF09A
-	.string "I stay here because I became a fan\n"
-	.string "of FLANNERY's power.\p"
-	.string "Hehehehe.$"
+	.string "FLANNERY's granddad was a member of\n"
+	.string "the ELITE FOUR before he passed.\p"
+	.string "She's been following his example,\n"
+	.string "and now she's our fiery GYM LEADER!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPreBattle: @ 81FF0DC
 	.string "Welcome… No, wait.\p"
@@ -323,7 +325,7 @@ LavaridgeTown_Gym_1F_Text_FlanneryPreBattle: @ 81FF0DC
 	.string "Dare not underestimate me, though\l"
 	.string "I have been LEADER only a short time!\p"
 	.string "With skills inherited from my grand-\n"
-	.string "father, I shall, uh…demonstrate the\l"
+	.string "father, I shall, uh… demonstrate the\l"
 	.string "hot moves we have honed on this land!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryDefeat: @ 81FF233
@@ -378,8 +380,10 @@ LavaridgeTown_Gym_1F_Text_GymStatueCertified: @ 81FF5C4
 	.string "{PLAYER}$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPreRematch: @ 81FF601
-	.string "FLANNERY: Losing a battle isn't going\n"
-	.string "to deflate me.\p"
+	.string "FLANNERY: I've been fired up since our\n"
+	.string "last battle!\p"
+	.string "I've been training with WINONA and I'm\n"
+	.string "ready to take you on again!\p"
 	.string "I love POKéMON.\n"
 	.string "I love to battle.\l"
 	.string "And… I love this GYM!\p"
@@ -399,8 +403,10 @@ LavaridgeTown_Gym_1F_Text_FlanneryPostRematch: @ 81FF6BF
 	.string "again sometime!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons: @ 81FF75E
-	.string "FLANNERY: Losing a battle isn't going\n"
-	.string "to deflate me.\p"
+	.string "FLANNERY: I've been fired up since our\n"
+	.string "last battle!\p"
+	.string "I've been training with WINONA and I'm\n"
+	.string "ready to take you on again!\p"
 	.string "I love POKéMON.\n"
 	.string "I love to battle.\l"
 	.string "And… I love this GYM!\p"

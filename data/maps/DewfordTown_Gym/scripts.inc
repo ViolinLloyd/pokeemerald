@@ -325,15 +325,15 @@ DewfordTown_Gym_Text_GymGuidePostVictory: @ 81FCB5C
 	.string "Your future is bright, too!$"
 
 DewfordTown_Gym_Text_TakaoPreBattle: @ 81FCB9F
-	.string "Might is right!\n"
+	.string "Might makes right!\n"
 	.string "Come on!$"
 
 DewfordTown_Gym_Text_TakaoDefeat: @ 81FCBB8
-	.string "Not enough power…$"
+	.string "Outsmarted and outskilled…$"
 
 DewfordTown_Gym_Text_TakaoPostBattle: @ 81FCBCA
-	.string "Your skill overcame my strength!\n"
-	.string "Your technique is commendable!$"
+	.string "You remind me of BRAWLY! Even though\n"
+	.string "he's strong, he's quite the tactician.$"
 
 DewfordTown_Gym_Text_JocelynPreBattle: @ 81FCC0A
 	.string "There's no need for BRAWLY to be\n"
@@ -370,12 +370,12 @@ DewfordTown_Gym_Text_LilithPreBattle: @ 81FCDB8
 	.string "Are you stumbling around in the dark?$"
 
 DewfordTown_Gym_Text_LilithDefeat: @ 81FCDE5
-	.string "Oh, you…\n"
-	.string "I don't want to know you!$"
+	.string "Ah! You caught me by surprise!$"
 
 DewfordTown_Gym_Text_LilithPostBattle: @ 81FCE08
-	.string "You deserve to stay lost and end up\n"
-	.string "back at the entrance again!$"
+	.string "BRAWLY makes us train in GRANITE CAVE.\p"
+	.string "It also gets really dark in there, so\n"
+	.string "we're used to this environment.$"
 
 DewfordTown_Gym_Text_BrendenPreBattle: @ 81FCE48
 	.string "I'll show you the gumption of\n"
@@ -386,20 +386,25 @@ DewfordTown_Gym_Text_BrendenDefeat: @ 81FCE75
 	.string "It's not like me to lose this way!$"
 
 DewfordTown_Gym_Text_BrendenPostBattle: @ 81FCEAB
-	.string "Oh, aye! You're worthy of seeing\n"
-	.string "our GYM LEADER.$"
+	.string "BRAWLY loves surfing. Most of the\n"
+	.string "people on this island learned to\l"
+	.string "surf from him.$"
 
 DewfordTown_Gym_Text_CristianPreBattle: @ 81FCEDC
-	.string "If you mean to pass, it has to be\n"
-	.string "through me!$"
+	.string "Did you know BRAWLY isn't originally\n"
+	.string "from HOENN?\p"
+	.string "I'll tell you where he's from if\n"
+	.string "you can beat me!$"
 
 DewfordTown_Gym_Text_CristianDefeat: @ 81FCF0A
-	.string "Grrrrr!\n"
-	.string "Vastly overpowered!$"
+	.string "Alright, you beat me fair and square.\n"
+	.string "I'll tell you what I know.$"
 
 DewfordTown_Gym_Text_CristianPostBattle: @ 81FCF26
-	.string "You win!\n"
-	.string "Go after that BADGE!$"
+	.string "BRAWLY hails from KANTO. He used to\n"
+	.string "train there with a man named BRUNO.\p"
+	.string "He came to DEWFORD because the water\n"
+	.string "is perfect for surfing!$"
 
 DewfordTown_Gym_Text_BrawlyPreBattle: @ 81FCF44
 	.string "I'm BRAWLY!\n"

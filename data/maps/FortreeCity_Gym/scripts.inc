@@ -181,18 +181,19 @@ FortreeCity_Gym_Text_EdwardoPostBattle: @ 82169F1
 	.string "myself even stronger.$"
 
 FortreeCity_Gym_Text_FlintPreBattle: @ 8216A66
-	.string "There's no need for WINONA, our GYM\n"
-	.string "LEADER, to deal with you!\p"
-	.string "I'm plenty good enough for you!$"
+	.string "WINONA, our GYM LEADER, is an elite\n"
+	.string "TRAINER!\p"
+	.string "She's in charge of overseeing the\n"
+	.string "other GYM LEADERS around HOENN.$"
 
 FortreeCity_Gym_Text_FlintDefeat: @ 8216AC4
-	.string "WINONA, I…\n"
-	.string "I lost!$"
+	.string "Woah! You're an elite TRAINER as well!$"
 
 FortreeCity_Gym_Text_FlintPostBattle: @ 8216AD7
-	.string "WINONA is cute and she's strong.\n"
-	.string "She's the ultimate LEADER!\p"
-	.string "Blush…$"
+	.string "Lately, WINONA's been spending a lot\n"
+	.string "of time over in LAVARIDGE TOWN.\p"
+	.string "She's been helping FLANNERY get the\n"
+	.string "GYM up and running again.$"
 
 FortreeCity_Gym_Text_AshleyPreBattle: @ 8216B1A
 	.string "WINONA taught me personally!\n"
@@ -229,11 +230,14 @@ FortreeCity_Gym_Text_DariusDefeat: @ 8216CF2
 	.string "You seem to know your stuff!$"
 
 FortreeCity_Gym_Text_DariusPostBattle: @ 8216D0F
-	.string "Sure, you beat me all right.\n"
-	.string "But you'd better watch it! Our LEADER\l"
-	.string "WINONA's POKéMON are all business.$"
+	.string "On the rare occasion she's free, WINONA\n"
+	.string "flies all over HOENN with her POKéMON.\p"
+	.string "It's quite the sight to behold!$"
 
 FortreeCity_Gym_Text_WinonaPreBattle: @ 8216D75
+	.string "You must be NORMAN's child. The other\n"
+	.string "GYM LEADERS have recounted your\l"
+	.string "exploits.\p"
 	.string "I am WINONA. I am the LEADER of\n"
 	.string "the FORTREE POKéMON GYM.\p"
 	.string "I have become one with BIRD POKéMON\n"
@@ -241,7 +245,7 @@ FortreeCity_Gym_Text_WinonaPreBattle: @ 8216D75
 	.string "However grueling the battle, we have\n"
 	.string "triumphed with grace…\p"
 	.string "Witness the elegant choreography\n"
-	.string "of BIRD POKéMON and I!$"
+	.string "of my BIRD POKéMON and me!$"
 
 FortreeCity_Gym_Text_WinonaDefeat: @ 8216E60
 	.string "Never before have I seen a TRAINER\n"
@@ -274,6 +278,8 @@ FortreeCity_Gym_Text_RegisteredWinona: @ 8217044
 	.string "in the POKéNAV.$"
 
 FortreeCity_Gym_Text_WinonaPostBattle: @ 8217071
+	.string "It would appear that you are as strong\n"
+	.string "as FLANNERY and the others claim.\p"
 	.string "Though I fell to you, I will remain\n"
 	.string "devoted to BIRD POKéMON.$"
 

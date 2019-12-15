@@ -314,7 +314,9 @@ MauvilleCity_Gym_Text_BenDefeat: @ 820E469
 
 MauvilleCity_Gym_Text_BenPostBattle: @ 820E47E
 	.string "WATTSON says he likes setting up\n"
-	.string "little traps with switches.$"
+	.string "little traps with switches.\p"
+	.string "He's friends with that eccentric\n"
+	.string "TRICK MASTER that lives south of here.$"
 
 MauvilleCity_Gym_Text_VivianPreBattle: @ 820E4BB
 	.string "With my charm and my POKéMON's moves,\n"
@@ -338,11 +340,11 @@ MauvilleCity_Gym_Text_AngeloDefeat: @ 820E5A8
 	.string "My eyes are frazzled…$"
 
 MauvilleCity_Gym_Text_AngeloPostBattle: @ 820E5C2
-	.string "MAUVILLE GYM's WATTSON has a shiny\n"
-	.string "forehead. It makes me happy!$"
+	.string "Our GYM LEADER, WATTSON, has a\n"
+	.string "shiny forehead. It makes me happy!$"
 
 MauvilleCity_Gym_Text_WattsonPreBattle: @ 820E602
-	.string "I've given up on my plans to convert\n"
+	.string "I've given up on my plans to expand\n"
 	.string "the city, I have.\p"
 	.string "And so, I put my time into making\n"
 	.string "door traps in my GYM.\p"

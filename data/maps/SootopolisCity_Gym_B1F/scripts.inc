@@ -92,8 +92,9 @@ SootopolisCity_Gym_B1F_Text_DaphnePostBattle: @ 8225F67
 	.string "POKéMON.$"
 
 SootopolisCity_Gym_B1F_Text_ConniePreBattle: @ 8225FBE
-	.string "I should teach you how harsh battles\n"
-	.string "can be.$"
+	.string "The POKéMON GYM of the highest level\n"
+	.string "in the HOENN region…\p"
+	.string "That's the SOOTOPOLIS GYM.$"
 
 SootopolisCity_Gym_B1F_Text_ConnieDefeat: @ 8225FEB
 	.string "Oh.\n"
@@ -105,18 +106,16 @@ SootopolisCity_Gym_B1F_Text_ConniePostBattle: @ 8225FFE
 	.string "need to walk on each floor tile once.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetPreBattle: @ 8226061
-	.string "The POKéMON GYM of the highest level\n"
-	.string "in the HOENN region…\p"
-	.string "That's the SOOTOPOLIS GYM.$"
+	.string "WALLACE is great and all, but\n"
+	.string "I'm thrilled to have JUAN back.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetDefeat: @ 82260B6
-	.string "What a high level you are!$"
+	.string "I'm sorry, JUAN!$"
 
 SootopolisCity_Gym_B1F_Text_BridgetPostBattle: @ 82260D1
-	.string "Rather than being satisfied by being\n"
-	.string "in a strong GYM, I imagine training in\l"
-	.string "other places will make you stronger.\l"
-	.string "But above all, it looks more fun.$"
+	.string "JUAN was the GYM LEADER when I joined\n"
+	.string "the SOOTOPOLIS GYM. His pupil WALLACE\l"
+	.string "briefly took over, but now JUAN's back!$"
 
 SootopolisCity_Gym_B1F_Text_OliviaPreBattle: @ 8226164
 	.string "I train my POKéMON together with\n"
@@ -137,23 +136,25 @@ SootopolisCity_Gym_B1F_Text_TiffanyPreBattle: @ 82261F7
 	.string "would be elegantly beautiful!$"
 
 SootopolisCity_Gym_B1F_Text_TiffanyDefeat: @ 8226274
-	.string "Well, excuse me?!$"
+	.string "Your elegance is blinding!$"
 
 SootopolisCity_Gym_B1F_Text_TiffanyPostBattle: @ 8226286
-	.string "This is really obvious, but how strong\n"
-	.string "you are as a TRAINER has nothing to do\l"
-	.string "with how young or old you are.$"
+	.string "JUAN and WALLACE embody elegance!\p"
+	.string "They're both master TRAINERS and\n"
+	.string "COORDINATORS! They're breathtaking!$"
 
 SootopolisCity_Gym_B1F_Text_BethanyPreBattle: @ 82262F3
-	.string "When I'm with my POKéMON, the time\n"
-	.string "flies by before you can say, “Oops!”$"
+	.string "The WATER type is exquisite in its\n"
+	.string "graceful fluidity.$"
 
 SootopolisCity_Gym_B1F_Text_BethanyDefeat: @ 822633B
-	.string "Oops!$"
+	.string "You've made quite the splash!$"
 
 SootopolisCity_Gym_B1F_Text_BethanyPostBattle: @ 8226341
-	.string "I wish I could forget about lost causes\n"
-	.string "before I can manage an “Oops!”$"
+	.string "When I hear JUAN talk about WATER\n"
+	.string "POKéMON, I just can't help but to get\l"
+	.string "swept along!\p"
+	.string "He's certainly got a way with words!$"
 
 SootopolisCity_Gym_B1F_Text_AnnikaPreBattle: @ 8226388
 	.string "I can battle with really rare POKéMON\n"
