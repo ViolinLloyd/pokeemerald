@@ -573,8 +573,10 @@ Route106_Text_NedDefeated: @ 8296553
 	.string "to the washroom…$"
 
 Route106_Text_NedPostBattle: @ 8296588
-	.string "Oh, no! I've got this feeling I'll hook\n"
-	.string "a big one!$"
+	.string "Every day, I see BRAWLY and his GYM\n"
+	.string "TRAINERS run by here and go into\l"
+	.string "GRANITE CAVE to train.\p"
+	.string "They're... intense.$"
 
 Route106_Text_DouglasIntro: @ 82965BB
 	.string "Hahahah! I'm a lousy runner, but in\n"
@@ -1332,8 +1334,9 @@ Route111_Text_TravisDefeat: @ 8298DD8
 	.string "My POKéMON lost its pep…$"
 
 Route111_Text_TravisPostBattle: @ 8298DF1
-	.string "When I see a TRAINER with a lot of pep,\n"
-	.string "I can't help looking.$"
+	.string "I'm on my way to LAVARIDGE!\p"
+	.string "I heard they're finally reopening\n"
+	.string "the GYM there.$"
 
 Route111_Text_IreneIntro: @ 8298E2F
 	.string "I don't know where you're going,\n"
@@ -3139,16 +3142,18 @@ Route120_Text_LeonelPostBattle: @ 829F0A1
 	.string "battling with your favorite POKéMON.$"
 
 Route121_Text_VanessaIntro: @ 829F0EC
-	.string "Will you play with my delightfully\n"
-	.string "pretty POKéMON?$"
+	.string "It's my dream to win a CONTEST and\n"
+	.string "meet a celebrity. Imagine running\l"
+	.string "into WALLACE, or even JUAN!$"
 
 Route121_Text_VanessaDefeat: @ 829F11F
-	.string "This isn't what I meant!$"
+	.string "No fair! I was distracted!$"
 
 Route121_Text_VanessaPostBattle: @ 829F138
 	.string "I'm going to a CONTEST in LILYCOVE.\p"
 	.string "My POKéMON should have no problem\n"
-	.string "sweeping the MASTER CLASS.$"
+	.string "sweeping the MASTER CLASS. Then my\l"
+	.string "dreams will be one step closer…$"
 
 Route121_Text_WalterIntro: @ 829F199
 	.string "With my POKéMON, I have traveled\n"
