@@ -2160,7 +2160,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tony5[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Takao[] = {
     {
     .iv = 127,
-    .lvl = 13,
+    .lvl = 16,
+    .species = SPECIES_MACHOP,
+    },
+    {
+    .iv = 127,
+    .lvl = 17,
+    .species = SPECIES_MAKUHITA,
+    },
+    {
+    .iv = 127,
+    .lvl = 18,
     .species = SPECIES_MACHOP,
     }
 };
@@ -3447,25 +3457,32 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     {
-    .iv = 100,
+    .iv = 150,
     .lvl = 16,
     .species = SPECIES_MACHOP,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_KARATE_CHOP, MOVE_LOW_KICK, MOVE_SEISMIC_TOSS, MOVE_BULK_UP
+    .moves = MOVE_KARATE_CHOP, MOVE_LOW_KICK, MOVE_FORESIGHT, MOVE_BULK_UP
     },
     {
-    .iv = 100,
+    .iv = 150,
     .lvl = 16,
     .species = SPECIES_MEDITITE,
     .heldItem = ITEM_NONE,
     .moves = MOVE_FOCUS_PUNCH, MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_BULK_UP
     },
     {
+    .iv = 175,
+    .lvl = 18,
+    .species = SPECIES_HERACROSS,
+    .heldItem = ITEM_NONE,
+    .moves = MOVE_FURY_ATTACK, MOVE_BRICK_BREAK, MOVE_COUNTER, MOVE_BULK_UP
+    },
+    {
     .iv = 200,
     .lvl = 19,
-    .species = SPECIES_MAKUHITA,
+    .species = SPECIES_HARIYAMA,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = MOVE_ARM_THRUST, MOVE_VITAL_THROW, MOVE_REVERSAL, MOVE_BULK_UP
+    .moves = MOVE_ARM_THRUST, MOVE_VITAL_THROW, MOVE_KNOCK_OFF, MOVE_BULK_UP
     }
 };
 
@@ -4570,17 +4587,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Claude[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Elliot1[] = {
     {
     .iv = 0,
-    .lvl = 10,
+    .lvl = 13,
     .species = SPECIES_MAGIKARP,
     },
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 15,
     .species = SPECIES_TENTACOOL,
     },
     {
     .iv = 0,
-    .lvl = 10,
+    .lvl = 13,
     .species = SPECIES_MAGIKARP,
     }
 };
@@ -4588,9 +4605,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Elliot1[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Ned[] = {
     {
     .iv = 10,
-    .lvl = 11,
+    .lvl = 13,
     .species = SPECIES_TENTACOOL,
-    }
+    },
+    {
+    .iv = 10,
+    .lvl = 12,
+    .species = SPECIES_WINGULL,
+    },
+    {
+    .iv = 10,
+    .lvl = 13,
+    .species = SPECIES_GOLDEEN,
+    },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Dale[] = {
@@ -5646,19 +5673,21 @@ static const struct TrainerMonItemCustomMoves sParty_Lao5[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Jocelyn[] = {
+static const struct TrainerMonItemCustomMoves sParty_Jocelyn[] = {
     {
     .iv = 127,
-    .lvl = 13,
-    .species = SPECIES_MEDITITE,
+    .lvl = 20,
+    .species = SPECIES_BRELOOM,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = MOVE_MEGA_DRAIN, MOVE_MACH_PUNCH, MOVE_LEECH_SEED, MOVE_STUN_SPORE
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Laura[] = {
     {
     .iv = 150,
-    .lvl = 13,
-    .species = SPECIES_MEDITITE,
+    .lvl = 15,
+    .species = SPECIES_MACHOP,
     }
 };
 
@@ -7719,15 +7748,25 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Marc[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Brenden[] = {
     {
     .iv = 100,
-    .lvl = 13,
+    .lvl = 17,
     .species = SPECIES_MACHOP,
+    },
+    {
+    .iv = 100,
+    .lvl = 16,
+    .species = SPECIES_CORPHISH,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Lilith[] = {
     {
     .iv = 150,
-    .lvl = 13,
+    .lvl = 17,
+    .species = SPECIES_MEDITITE,
+    },
+    {
+    .iv = 150,
+    .lvl = 17,
     .species = SPECIES_MEDITITE,
     }
 };
@@ -7735,8 +7774,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Lilith[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Cristian[] = {
     {
     .iv = 200,
-    .lvl = 13,
+    .lvl = 17,
     .species = SPECIES_MAKUHITA,
+    },
+    {
+    .iv = 200,
+    .lvl = 18,
+    .species = SPECIES_COMBUSKEN,
     }
 };
 
