@@ -237,7 +237,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum2[] = {
     {
     .iv = 0,
     .lvl = 18,
-    .species = SPECIES_CARVHANA,
+    .species = SPECIES_CARVANHA,
     }
 };
 
@@ -3502,7 +3502,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     },
     {
     .iv = 250,
-    .lvl = 20,
+    .lvl = 21,
     .species = SPECIES_PIKACHU,
     .heldItem = ITEM_NONE,
     .moves = MOVE_THUNDER_WAVE, MOVE_THUNDERBOLT, MOVE_QUICK_ATTACK, MOVE_DOUBLE_TEAM
@@ -4562,7 +4562,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Andrew[] = {
     {
     .iv = 0,
     .lvl = 16,
-    .species = SPECIES_CARVHANA,
+    .species = SPECIES_CARVANHA,
     },
     {
     .iv = 0,
@@ -4652,7 +4652,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Dale[] = {
     {
     .iv = 0,
     .lvl = 15,
-    .species = SPECIES_CARVHANA,
+    .species = SPECIES_CARVANHA,
     },
     {
     .iv = 0,
@@ -4833,7 +4833,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jacob[] = {
     .iv = 20,
     .lvl = 16,
     .species = SPECIES_VOLTORB,
-    }
+    },
     {
     .iv = 200,
     .lvl = 18,
