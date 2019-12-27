@@ -2866,7 +2866,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Jace),
-        .party = {.NoItemDefaultMoves = sParty_Jace},
+        .party = {.NoItemCustomMoves = sParty_Jace},
     },
 
     [TRAINER_KEEGAN] =
