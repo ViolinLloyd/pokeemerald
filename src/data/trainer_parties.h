@@ -3620,35 +3620,35 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
 static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     {
     .iv = 200,
-    .lvl = 24,
+    .lvl = 25,
     .species = SPECIES_SLUGMA,
     .heldItem = ITEM_NONE,
     .moves = MOVE_OVERHEAT, MOVE_SMOG, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY
     },
     {
     .iv = 200,
-    .lvl = 24,
+    .lvl = 26,
     .species = SPECIES_NINETALES,
     .heldItem = ITEM_NONE,
     .moves = MOVE_OVERHEAT, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_FLAMETHROWER
     },
     {
     .iv = 250,
-    .lvl = 26,
+    .lvl = 30,
     .species = SPECIES_CAMERUPT,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_ORAN_BERRY,
     .moves = MOVE_OVERHEAT, MOVE_TACKLE, MOVE_SUNNY_DAY, MOVE_ATTRACT
     },
     {
     .iv = 250,
-    .lvl = 26,
+    .lvl = 28,
     .species = SPECIES_COMBUSKEN,
     .heldItem = ITEM_NONE,
     .moves = MOVE_OVERHEAT, MOVE_DOUBLE_KICK, MOVE_THUNDER_PUNCH, MOVE_FIRE_PUNCH
     },
     {
     .iv = 250,
-    .lvl = 29,
+    .lvl = 32,
     .species = SPECIES_TORKOAL,
     .heldItem = ITEM_WHITE_HERB,
     .moves = MOVE_OVERHEAT, MOVE_FLAMETHROWER, MOVE_BODY_SLAM, MOVE_ATTRACT
