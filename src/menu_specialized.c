@@ -877,6 +877,19 @@ s32 GetBoxOrPartyMonData(u16 boxId, u16 monId, s32 request, u8 *dst)
     return ret;
 }
 
+//struct Pokemon *GetBoxOrPartyMon(u16 boxId, u16 monId)
+//{
+//    if (boxId == TOTAL_BOXES_COUNT)
+//        return &gPlayerParty[monId];
+//    else
+//    {
+//        struct Pokemon *mon;
+//        struct BoxPokemon *box = &gPokemonStoragePtr->boxes[boxId][monId];
+//        BoxMonToMon(box, mon);
+//        return mon;
+//    }
+//}
+
 static u8 *sub_81D2CD0(u8 *dst, u16 boxId, u16 monId)
 {
     u16 species, level, gender;
@@ -1057,8 +1070,10 @@ void sub_81D3094(void *tilesDst, void *palDst, u16 boxId, u16 monId, u16 arg5, u
         u32 trainerId = GetBoxOrPartyMonData(boxId, monId, MON_DATA_OT_ID, NULL);
         u32 personality = GetBoxOrPartyMonData(boxId, monId, MON_DATA_PERSONALITY, NULL);
 
+        //struct Pokemon *mon = GetBoxOrPartyMon(boxId, monId);
         LoadSpecialPokePic(&gMonFrontPicTable[species], tilesDst, species, personality, TRUE);
         LZ77UnCompWram(GetMonSpritePalFromSpeciesAndPersonality(species, trainerId, personality), palDst);
+        //LZ77UnCompWram(GetMonFrontSpritePal(mon), palDst);
     }
 }
 

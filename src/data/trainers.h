@@ -3781,7 +3781,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_WINONA_1] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_SHINY_POKEMON,
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_LEADER_WINONA,
@@ -3790,7 +3790,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_RISKY,
         .partySize = ARRAY_COUNT(sParty_Winona1),
-        .party = {.ItemCustomMoves = sParty_Winona1},
+        .party = {.ItemCustomMovesShiny = sParty_Winona1},
     },
 
     [TRAINER_TATE_AND_LIZA_1] =
@@ -11061,7 +11061,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_WINONA_2] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_SHINY_POKEMON,
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_LEADER_WINONA,
@@ -11070,12 +11070,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_RISKY,
         .partySize = ARRAY_COUNT(sParty_Winona2),
-        .party = {.ItemCustomMoves = sParty_Winona2},
+        .party = {.ItemCustomMovesShiny = sParty_Winona2},
     },
 
     [TRAINER_WINONA_3] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_SHINY_POKEMON,
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_LEADER_WINONA,
@@ -11084,12 +11084,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_RISKY,
         .partySize = ARRAY_COUNT(sParty_Winona3),
-        .party = {.ItemCustomMoves = sParty_Winona3},
+        .party = {.ItemCustomMovesShiny = sParty_Winona3},
     },
 
     [TRAINER_WINONA_4] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_SHINY_POKEMON,
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_LEADER_WINONA,
@@ -11098,12 +11098,12 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_RISKY,
         .partySize = ARRAY_COUNT(sParty_Winona4),
-        .party = {.ItemCustomMoves = sParty_Winona4},
+        .party = {.ItemCustomMovesShiny = sParty_Winona4},
     },
 
     [TRAINER_WINONA_5] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_SHINY_POKEMON,
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_LEADER_WINONA,
@@ -11112,7 +11112,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_RISKY,
         .partySize = ARRAY_COUNT(sParty_Winona5),
-        .party = {.ItemCustomMoves = sParty_Winona5},
+        .party = {.ItemCustomMovesShiny = sParty_Winona5},
     },
 
     [TRAINER_TATE_AND_LIZA_2] =

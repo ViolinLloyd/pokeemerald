@@ -176,13 +176,15 @@
 #define MON_DATA_SPEED2            86
 #define MON_DATA_SPATK2            87
 #define MON_DATA_SPDEF2            88
+#define MON_DATA_SHINY             89
 
 #define MIN_LEVEL 1
 #define MAX_LEVEL 100
 
-#define OT_ID_PLAYER_ID       0
-#define OT_ID_PRESET          1
-#define OT_ID_RANDOM_NO_SHINY 2
+#define OT_ID_PLAYER_ID             0
+#define OT_ID_PRESET                1
+#define OT_ID_RANDOM_NO_SHINY       2
+#define OT_ID_RANDOM_CHECK_SHINY    3
 
 #define MON_GIVEN_TO_PARTY      0
 #define MON_GIVEN_TO_PC         1

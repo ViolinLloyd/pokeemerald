@@ -2133,6 +2133,8 @@ void ZeroMonData(struct Pokemon *mon)
     SetMonData(mon, MON_DATA_SPDEF, &arg);
     arg = 255;
     SetMonData(mon, MON_DATA_MAIL, &arg);
+    //arg = SHINY_STATUS_UNKNOWN;
+    //SetMonData(mon, MON_DATA_SHINY, &arg);
 }
 
 void ZeroPlayerPartyMons(void)
@@ -2166,6 +2168,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     u32 personality;
     u32 value;
     u16 checksum;
+    //u8 shinyStatus;
 
     ZeroBoxMonData(boxMon);
 
@@ -2185,11 +2188,21 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
             value = Random32();
             shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
         } while (shinyValue < SHINY_ODDS);
+
+        //shinyStatus = SHINY_STATUS_NO;
+        //SetBoxMonData(boxMon, MON_DATA_SHINY, &shinyStatus);
     }
     else if (otIdType == OT_ID_PRESET) //Pokemon has a preset OT ID
     {
         value = fixedOtId;
     }
+    //else if (otIdType == OT_ID_RANDOM_CHECK_SHINY)
+    //{
+    //    // In this case, we pass the shiny status (SHINY_STATUS_YES, etc.) through the fixedOtId parameter
+    //    shinyStatus = fixedOtId;
+    //    SetBoxMonData(boxMon, MON_DATA_SHINY, &shinyStatus);
+    //    value = Random32();
+    //}
     else //Player is the OT
     {
         value = gSaveBlock2Ptr->playerTrainerId[0]
@@ -2314,6 +2327,46 @@ void CreateMaleMon(struct Pokemon *mon, u16 species, u8 level)
     }
     while (GetGenderFromSpeciesAndPersonality(species, personality) != MON_MALE);
     CreateMon(mon, species, level, 32, 1, personality, OT_ID_PRESET, otId);
+}
+
+// This is only used to create Winona's Swellow
+void CreateShinyMon(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 fixedPersonality, u8 otIdType, u8 shinyStatus)
+{
+    u32 fixedOtId;
+    u32 value;
+    u32 personality;
+    if (hasFixedPersonality)
+        personality = fixedPersonality;
+    else
+        personality = Random32();
+
+    if (shinyStatus == SHINY_STATUS_YES)
+    {
+        u32 shinyValue;
+        do
+        {
+            value = Random32();
+            shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
+        } while (shinyValue >= SHINY_ODDS);
+        fixedOtId = value;
+    }
+    else if (shinyStatus == SHINY_STATUS_NO)
+    {
+        u32 shinyValue;
+        do
+        {
+            value = Random32();
+            shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
+        } while (shinyValue < SHINY_ODDS);
+        fixedOtId = value;
+    }
+    else
+    {
+        fixedOtId = Random32();
+    }
+
+    CreateMon(mon, species, level, fixedIV, hasFixedPersonality, fixedPersonality, OT_ID_PRESET, fixedOtId);
+    //SetMonData(mon, MON_DATA_SHINY, &shinyStatus);
 }
 
 void CreateMonWithIVsPersonality(struct Pokemon *mon, u16 species, u8 level, u32 ivs, u32 personality)
@@ -2849,6 +2902,7 @@ void BoxMonToMon(const struct BoxPokemon *src, struct Pokemon *dest)
     value = 255;
     SetMonData(dest, MON_DATA_MAIL, &value);
     CalculateMonStats(dest);
+    //SetMonData(dest, MON_DATA_SHINY, &(src->shiny));
 }
 
 u8 GetLevelFromMonExp(struct Pokemon *mon)
@@ -3620,6 +3674,9 @@ u32 GetMonData(struct Pokemon *mon, s32 field, u8* data)
     case MON_DATA_MAIL:
         ret = mon->mail;
         break;
+    //case MON_DATA_SHINY:
+    //    ret = mon->shiny;
+    //    break;
     default:
         ret = GetBoxMonData(&mon->box, field, data);
         break;
@@ -4020,6 +4077,9 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
         break;
     case MON_DATA_SPECIES2:
         break;
+    //case MON_DATA_SHINY:
+    //    SET8(mon->shiny);
+    //    break;
     default:
         SetBoxMonData(&mon->box, field, data);
         break;
@@ -4035,6 +4095,8 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
     struct PokemonSubstruct2 *substruct2 = NULL;
     struct PokemonSubstruct3 *substruct3 = NULL;
 
+    
+    //if (field > MON_DATA_ENCRYPT_SEPARATOR && field != MON_DATA_SHINY)
     if (field > MON_DATA_ENCRYPT_SEPARATOR)
     {
         substruct0 = &(GetSubstruct(boxMon, boxMon->personality, 0)->type0);
@@ -4286,6 +4348,9 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
         substruct3->spDefenseIV = (ivs >> 25) & 0x1F;
         break;
     }
+    //case MON_DATA_SHINY:
+    //    SET8(boxMon->shiny);
+    //    break;
     default:
         break;
     }
@@ -6314,10 +6379,20 @@ static void sub_806E6CC(u8 taskId)
 
 const u32 *GetMonFrontSpritePal(struct Pokemon *mon)
 {
+    //u16 species = GetMonData(mon, MON_DATA_SPECIES2, 0);
+    //u32 otId = GetMonData(mon, MON_DATA_OT_ID, 0);
+    //u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, 0);
+    //return GetMonSpritePalFromSpeciesAndPersonality(species, otId, personality);
+
     u16 species = GetMonData(mon, MON_DATA_SPECIES2, 0);
-    u32 otId = GetMonData(mon, MON_DATA_OT_ID, 0);
-    u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, 0);
-    return GetMonSpritePalFromSpeciesAndPersonality(species, otId, personality);
+
+    if (species > NUM_SPECIES)
+        return gMonPaletteTable[0].data;
+
+    if (IsMonShiny(mon))
+        return gMonShinyPaletteTable[species].data;
+    else
+        return gMonPaletteTable[species].data;
 }
 
 const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 personality)
@@ -6336,10 +6411,17 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
 
 const struct CompressedSpritePalette *GetMonSpritePalStruct(struct Pokemon *mon)
 {
+    //u16 species = GetMonData(mon, MON_DATA_SPECIES2, 0);
+    //u32 otId = GetMonData(mon, MON_DATA_OT_ID, 0);
+    //u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, 0);
+    //return GetMonSpritePalStructFromOtIdPersonality(species, otId, personality);
+
     u16 species = GetMonData(mon, MON_DATA_SPECIES2, 0);
-    u32 otId = GetMonData(mon, MON_DATA_OT_ID, 0);
-    u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, 0);
-    return GetMonSpritePalStructFromOtIdPersonality(species, otId, personality);
+
+    if (IsMonShiny(mon))
+        return &gMonShinyPaletteTable[species];
+    else
+        return &gMonPaletteTable[species];
 }
 
 const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u16 species, u32 otId , u32 personality)
@@ -6512,8 +6594,16 @@ void SetWildMonHeldItem(void)
 
 bool8 IsMonShiny(struct Pokemon *mon)
 {
-    u32 otId = GetMonData(mon, MON_DATA_OT_ID, 0);
-    u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, 0);
+    u8 shinyStatus;
+    u32 otId;
+    u32 personality;
+
+    //shinyStatus = GetMonData(mon, MON_DATA_SHINY, 0);
+    //if(shinyStatus != SHINY_STATUS_UNKNOWN)
+    //    return shinyStatus;
+
+    otId = GetMonData(mon, MON_DATA_OT_ID, 0);
+    personality = GetMonData(mon, MON_DATA_PERSONALITY, 0);
     return IsShinyOtIdPersonality(otId, personality);
 }
 

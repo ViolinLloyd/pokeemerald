@@ -2028,11 +2028,13 @@ void sub_8172EF0(u8 battler, struct Pokemon *mon)
 
     if (IsBattlerSpriteVisible(battler))
     {
-        shinyValue = HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality);
-        if (shinyValue < SHINY_ODDS)
-            isShiny = TRUE;
+        //shinyValue = HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality);
+        //if (shinyValue < SHINY_ODDS)
+        //    isShiny = TRUE;
 
-        if (isShiny)
+        //isShiny = IsMonShiny(mon);
+
+        if (IsMonShiny(mon))
         {
             if (GetSpriteTileStartByTag(ANIM_TAG_GOLD_STARS) == 0xFFFF)
             {

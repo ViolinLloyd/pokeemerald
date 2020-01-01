@@ -6,6 +6,10 @@
 
 #define SPECIES_SHINY_TAG 500
 
+#define SHINY_STATUS_YES 0
+#define SHINY_STATUS_NO 1
+#define SHINY_STATUS_UNKNOWN 2
+
 struct MonCoords
 {
     // This would use a bitfield, but some function
@@ -46,12 +50,23 @@ struct TrainerMonItemCustomMoves
     u16 moves[MAX_MON_MOVES];
 };
 
+struct TrainerMonItemCustomMovesShiny
+{
+    u16 iv;
+    u8 lvl;
+    u16 species;
+    u16 heldItem;
+    u16 moves[MAX_MON_MOVES];
+    u8 shiny;
+};
+
 union TrainerMonPtr
 {
     const struct TrainerMonNoItemDefaultMoves *NoItemDefaultMoves;
     const struct TrainerMonNoItemCustomMoves *NoItemCustomMoves;
     const struct TrainerMonItemDefaultMoves *ItemDefaultMoves;
     const struct TrainerMonItemCustomMoves *ItemCustomMoves;
+    const struct TrainerMonItemCustomMovesShiny *ItemCustomMovesShiny;
 };
 
 struct Trainer

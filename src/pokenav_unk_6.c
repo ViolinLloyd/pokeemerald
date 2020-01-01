@@ -530,8 +530,11 @@ void sub_81CDB98(s16 arg0, u8 arg1)
     species = GetBoxOrPartyMonData(boxId, monId, MON_DATA_SPECIES2, NULL);
     tid = GetBoxOrPartyMonData(boxId, monId, MON_DATA_OT_ID, NULL);
     personality = GetBoxOrPartyMonData(boxId, monId, MON_DATA_PERSONALITY, NULL);
+    //struct Pokemon *mon;
+    //mon = GetBoxOrPartyMon(boxId, monId);
     LoadSpecialPokePic(&gMonFrontPicTable[species], structPtr->monPicGfx[arg1], species, personality, TRUE);
     LZ77UnCompWram(GetMonSpritePalFromSpeciesAndPersonality(species, tid, personality), structPtr->monPal[arg1]);
+    //LZ77UnCompWram(GetMonFrontSpritePal(mon), structPtr->monPal[arg1]);
 }
 
 u16 sub_81CDC50(void)

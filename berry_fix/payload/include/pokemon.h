@@ -93,6 +93,7 @@ struct BoxPokemon
     /*0x1B*/ u8 markings;
     /*0x1C*/ u16 checksum;
     /*0x1E*/ u16 unknown;
+    ///*0x??*/ u8 shiny;
 
     union
     {
@@ -114,6 +115,7 @@ struct Pokemon
     /*0x5E*/ u16 speed;
     /*0x60*/ u16 spAttack;
     /*0x62*/ u16 spDefense;
+    ///*0x??*/ u8 shiny;
 };
 
 struct BattleTowerPokemon

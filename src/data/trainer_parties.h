@@ -3586,7 +3586,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
 static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     {
     .iv = 150,
-    .lvl = 16,
+    .lvl = 15,
     .species = SPECIES_MACHOP,
     .heldItem = ITEM_NONE,
     .moves = MOVE_KARATE_CHOP, MOVE_LOW_KICK, MOVE_FORESIGHT, MOVE_BULK_UP
@@ -3600,16 +3600,16 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     },
     {
     .iv = 175,
-    .lvl = 18,
+    .lvl = 16,
     .species = SPECIES_HERACROSS,
     .heldItem = ITEM_NONE,
     .moves = MOVE_FURY_ATTACK, MOVE_BRICK_BREAK, MOVE_COUNTER, MOVE_BULK_UP
     },
     {
     .iv = 200,
-    .lvl = 19,
+    .lvl = 18,
     .species = SPECIES_HARIYAMA,
-    .heldItem = ITEM_SITRUS_BERRY,
+    .heldItem = ITEM_NONE,
     .moves = MOVE_ARM_THRUST, MOVE_VITAL_THROW, MOVE_KNOCK_OFF, MOVE_BULK_UP
     }
 };
@@ -3735,48 +3735,54 @@ static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
+static const struct TrainerMonItemCustomMovesShiny sParty_Winona1[] = {
     {
-    .iv = 210,
+    .iv = 255,
     .lvl = 30,
     .species = SPECIES_SWELLOW,
     .heldItem = ITEM_SHARP_BEAK,
-    .moves = MOVE_AERIAL_ACE, MOVE_DOUBLE_TEAM, MOVE_ENDEAVOR, MOVE_QUICK_ATTACK
+    .moves = {MOVE_AERIAL_ACE, MOVE_DOUBLE_TEAM, MOVE_ENDEAVOR, MOVE_QUICK_ATTACK},
+    .shiny = SHINY_STATUS_YES
     },
     {
     .iv = 210,
     .lvl = 29,
     .species = SPECIES_XATU,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_PSYCHIC, MOVE_CONFUSE_RAY, MOVE_WISH, MOVE_AERIAL_ACE
+    .moves = {MOVE_PSYCHIC, MOVE_CONFUSE_RAY, MOVE_WISH, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 210,
     .lvl = 30,
     .species = SPECIES_TROPIUS,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_SYNTHESIS
+    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_SYNTHESIS},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 210,
     .lvl = 30,
     .species = SPECIES_PELIPPER,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_WATER_GUN, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE
+    .moves = {MOVE_WATER_GUN, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 220,
     .lvl = 33,
     .species = SPECIES_SKARMORY,
     .heldItem = ITEM_SHARP_BEAK,
-    .moves = MOVE_SAND_ATTACK, MOVE_FLY, MOVE_STEEL_WING, MOVE_AERIAL_ACE
+    .moves = {MOVE_SAND_ATTACK, MOVE_FLY, MOVE_STEEL_WING, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 35,
     .species = SPECIES_ALTARIA,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = MOVE_EARTHQUAKE, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_AERIAL_ACE
+    .moves = {MOVE_EARTHQUAKE, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     }
 };
 
@@ -11861,176 +11867,199 @@ static const struct TrainerMonItemCustomMoves sParty_Norman5[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Winona2[] = {
+static const struct TrainerMonItemCustomMovesShiny sParty_Winona2[] = {
     {
     .iv = 255,
     .lvl = 40,
-    .species = SPECIES_DRATINI,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = MOVE_THUNDER_WAVE, MOVE_THUNDERBOLT, MOVE_PROTECT, MOVE_ICE_BEAM
+    .species = SPECIES_SWELLOW,
+    .heldItem = ITEM_SHARP_BEAK,
+    .moves = {MOVE_AERIAL_ACE, MOVE_DOUBLE_TEAM, MOVE_ENDEAVOR, MOVE_QUICK_ATTACK},
+    .shiny = SHINY_STATUS_YES
     },
     {
     .iv = 255,
     .lvl = 38,
     .species = SPECIES_TROPIUS,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE
+    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 41,
     .species = SPECIES_PELIPPER,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_SURF, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE
+    .moves = {MOVE_SURF, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 43,
     .species = SPECIES_SKARMORY,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_WHIRLWIND, MOVE_SPIKES, MOVE_STEEL_WING, MOVE_AERIAL_ACE
+    .moves = {MOVE_WHIRLWIND, MOVE_SPIKES, MOVE_STEEL_WING, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 45,
     .species = SPECIES_ALTARIA,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = MOVE_AERIAL_ACE, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE
+    .moves = {MOVE_AERIAL_ACE, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE},
+    .shiny = SHINY_STATUS_NO
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Winona3[] = {
+static const struct TrainerMonItemCustomMovesShiny sParty_Winona3[] = {
     {
     .iv = 255,
     .lvl = 43,
     .species = SPECIES_HOOTHOOT,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_REFLECT, MOVE_DREAM_EATER
+    .moves = {MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_REFLECT, MOVE_DREAM_EATER},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 43,
     .species = SPECIES_TROPIUS,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE
+    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 45,
-    .species = SPECIES_DRAGONAIR,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = MOVE_THUNDER_WAVE, MOVE_THUNDERBOLT, MOVE_PROTECT, MOVE_ICE_BEAM
+    .species = SPECIES_SWELLOW,
+    .heldItem = ITEM_SHARP_BEAK,
+    .moves = {MOVE_AERIAL_ACE, MOVE_DOUBLE_TEAM, MOVE_ENDEAVOR, MOVE_QUICK_ATTACK},
+    .shiny = SHINY_STATUS_YES
     },
     {
     .iv = 255,
     .lvl = 46,
     .species = SPECIES_PELIPPER,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_SURF, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE
+    .moves = {MOVE_SURF, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 48,
     .species = SPECIES_SKARMORY,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_WHIRLWIND, MOVE_SPIKES, MOVE_STEEL_WING, MOVE_AERIAL_ACE
+    .moves = {MOVE_WHIRLWIND, MOVE_SPIKES, MOVE_STEEL_WING, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 50,
     .species = SPECIES_ALTARIA,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = MOVE_AERIAL_ACE, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE
+    .moves = {MOVE_AERIAL_ACE, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE},
+    .shiny = SHINY_STATUS_NO
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Winona4[] = {
+static const struct TrainerMonItemCustomMovesShiny sParty_Winona4[] = {
     {
     .iv = 255,
     .lvl = 48,
     .species = SPECIES_NOCTOWL,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_REFLECT, MOVE_DREAM_EATER
+    .moves = {MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_REFLECT, MOVE_DREAM_EATER},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 49,
     .species = SPECIES_TROPIUS,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE
+    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
-    .lvl = 50,
-    .species = SPECIES_DRAGONAIR,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = MOVE_THUNDER_WAVE, MOVE_THUNDERBOLT, MOVE_PROTECT, MOVE_ICE_BEAM
+    .lvl = 49,
+    .species = SPECIES_SWELLOW,
+    .heldItem = ITEM_SHARP_BEAK,
+    .moves = {MOVE_AERIAL_ACE, MOVE_DOUBLE_TEAM, MOVE_ENDEAVOR, MOVE_QUICK_ATTACK},
+    .shiny = SHINY_STATUS_YES
     },
     {
     .iv = 255,
     .lvl = 51,
     .species = SPECIES_PELIPPER,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_SURF, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE
+    .moves = {MOVE_SURF, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 53,
     .species = SPECIES_SKARMORY,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_WHIRLWIND, MOVE_SPIKES, MOVE_STEEL_WING, MOVE_AERIAL_ACE
+    .moves = {MOVE_WHIRLWIND, MOVE_SPIKES, MOVE_STEEL_WING, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 55,
     .species = SPECIES_ALTARIA,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = MOVE_AERIAL_ACE, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE
+    .moves = {MOVE_AERIAL_ACE, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE},
+    .shiny = SHINY_STATUS_NO
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Winona5[] = {
+static const struct TrainerMonItemCustomMovesShiny sParty_Winona5[] = {
     {
     .iv = 255,
     .lvl = 53,
     .species = SPECIES_NOCTOWL,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_REFLECT, MOVE_DREAM_EATER
+    .moves = {MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_REFLECT, MOVE_DREAM_EATER},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 54,
     .species = SPECIES_TROPIUS,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE
+    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_EARTHQUAKE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 55,
     .species = SPECIES_PELIPPER,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_SURF, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE
+    .moves = {MOVE_SURF, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 55,
-    .species = SPECIES_DRAGONITE,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = MOVE_HYPER_BEAM, MOVE_THUNDERBOLT, MOVE_EARTHQUAKE, MOVE_ICE_BEAM
+    .species = SPECIES_SWELLOW,
+    .heldItem = ITEM_SHARP_BEAK,
+    .moves = {MOVE_AERIAL_ACE, MOVE_DOUBLE_TEAM, MOVE_ENDEAVOR, MOVE_QUICK_ATTACK},
+    .shiny = SHINY_STATUS_YES
     },
     {
     .iv = 255,
     .lvl = 58,
     .species = SPECIES_SKARMORY,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_WHIRLWIND, MOVE_SPIKES, MOVE_STEEL_WING, MOVE_AERIAL_ACE
+    .moves = {MOVE_WHIRLWIND, MOVE_SPIKES, MOVE_STEEL_WING, MOVE_AERIAL_ACE},
+    .shiny = SHINY_STATUS_NO
     },
     {
     .iv = 255,
     .lvl = 60,
     .species = SPECIES_ALTARIA,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = MOVE_SKY_ATTACK, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE
+    .moves = {MOVE_SKY_ATTACK, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE},
+    .shiny = SHINY_STATUS_NO
     }
 };
 

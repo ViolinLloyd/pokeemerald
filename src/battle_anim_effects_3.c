@@ -24,6 +24,8 @@
 #include "constants/species.h"
 #include "constants/weather.h"
 
+#include "pokemon.h"
+
 extern const struct SpriteTemplate gThoughtBubbleSpriteTemplate;
 
 void AnimBlackSmoke(struct Sprite *);
@@ -3191,6 +3193,7 @@ void AnimTask_RolePlaySilhouette(u8 taskId)
     u32 priority;
     u8 spriteId;
     s16 coord1, coord2;
+    //struct Pokemon *mon;
 
     GetAnimBattlerSpriteId(ANIM_ATTACKER);
     if (IsContest())
@@ -3201,6 +3204,8 @@ void AnimTask_RolePlaySilhouette(u8 taskId)
         species = gContestResources->field_18->unk2;
         xOffset = 20;
         priority = GetBattlerSpriteBGPriority(gBattleAnimAttacker);
+
+        //(mon, species, 50, 0, TRUE, personality, OT_ID_PRESET, otId); //lmao hope this works
     }
     else
     {
@@ -3223,6 +3228,7 @@ void AnimTask_RolePlaySilhouette(u8 taskId)
 
             xOffset = 20;
             priority = GetBattlerSpriteBGPriority(gBattleAnimAttacker);
+            //mon = &gPlayerParty[gBattlerPartyIndexes[gBattleAnimTarget]];
         }
         else
         {
@@ -3243,12 +3249,14 @@ void AnimTask_RolePlaySilhouette(u8 taskId)
 
             xOffset = -20;
             priority = GetBattlerSpriteBGPriority(gBattleAnimAttacker);
+            //mon = &gEnemyParty[gBattlerPartyIndexes[gBattleAnimTarget]];
         }
     }
 
     coord1 = GetBattlerSpriteCoord(gBattleAnimAttacker, 0);
     coord2 = GetBattlerSpriteCoord(gBattleAnimAttacker, 1);
     spriteId = sub_80A8394(species, isBackPic, 0, coord1 + xOffset, coord2, 5, personality, otId, gBattleAnimTarget, 1);
+    //spriteId = sub_80A8394(species, isBackPic, 0, coord1 + xOffset, coord2, 5, personality, otId, gBattleAnimTarget, 1, mon);
 
     gSprites[spriteId].oam.priority = priority;
     gSprites[spriteId].oam.objMode = ST_OAM_OBJ_BLEND;
@@ -5007,6 +5015,7 @@ void AnimTask_SnatchOpposingMonMove(u8 taskId)
     u8 subpriority;
     u8 isBackPic;
     s16 x;
+    //struct Pokemon *mon;
 
     switch (gTasks[taskId].data[0])
     {
@@ -5035,6 +5044,8 @@ void AnimTask_SnatchOpposingMonMove(u8 taskId)
             subpriority = GetBattlerSpriteSubpriority(gBattleAnimAttacker);
             isBackPic = 0;
             x = -32;
+
+            //CreateMon(mon, species, 50, 0, TRUE, personality, OT_ID_PRESET, otId); //lmao hope this works
         }
         else
         {
@@ -5050,6 +5061,7 @@ void AnimTask_SnatchOpposingMonMove(u8 taskId)
                 subpriority = gSprites[GetAnimBattlerSpriteId(ANIM_TARGET)].subpriority + 1;
                 isBackPic = 0;
                 x = 272;
+                //mon = &gPlayerParty[gBattlerPartyIndexes[gBattleAnimAttacker]];
             }
             else
             {
@@ -5063,10 +5075,12 @@ void AnimTask_SnatchOpposingMonMove(u8 taskId)
                 subpriority = gSprites[GetAnimBattlerSpriteId(ANIM_TARGET)].subpriority - 1;
                 isBackPic = 1;
                 x = -32;
+                //mon = &gEnemyParty[gBattlerPartyIndexes[gBattleAnimAttacker]];
             }
         }
 
         spriteId2 = sub_80A8394(species, isBackPic, 0, x, GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y), subpriority, personality, otId, gBattleAnimAttacker, 0);
+        //spriteId2 = sub_80A8394(species, isBackPic, 0, x, GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y), subpriority, personality, otId, gBattleAnimAttacker, 0, mon);
         if (gBattleSpritesDataPtr->battlerData[gBattleAnimAttacker].transformSpecies != SPECIES_NONE)
             BlendPalette((gSprites[spriteId2].oam.paletteNum * 16) | 0x100, 16, 6, RGB_WHITE);
 
