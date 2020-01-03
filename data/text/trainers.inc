@@ -1938,7 +1938,7 @@ Route114_Text_TyraDefeat: @ 829AEE7
 	.string "TYRA: What an amazing battle style!$"
 
 Route114_Text_TyraPostBattle: @ 829AF0B
-	.string "TYRA: I was teaching my junior IVY\n"
+	.string "TYRA: I was teaching my kouhai IVY\n"
 	.string "about POKéMON.$"
 
 Route114_Text_TyraNotEnoughMons: @ 829AF3D
@@ -2474,12 +2474,12 @@ Route117_Text_DerekPostBattle: @ 829CBAD
 	.string "a BUG MANIAC.$"
 
 Route117_Text_AnnaIntro: @ 829CC4A
-	.string "ANNA: I'm with my pretty junior student\n"
-	.string "partner. I have to do good!$"
+	.string "ANNA: I'm with my pretty kouhai.\n"
+	.string "I have to do good!$"
 
 Route117_Text_AnnaDefeat: @ 829CC8E
-	.string "ANNA: I'm with my pretty junior student\n"
-	.string "partner! Let me win!$"
+	.string "ANNA: I'm with my pretty kouhai.\n"
+	.string "Let me win!$"
 
 Route117_Text_AnnaPostBattle: @ 829CCCB
 	.string "ANNA: Your POKéMON have some good\n"
@@ -2496,7 +2496,7 @@ Route117_Text_AnnaNotEnoughMons: @ 829CD61
 
 Route117_Text_MegIntro: @ 829CD9D
 	.string "MEG: I'm going to tag up with my super\n"
-	.string "senior student partner and beat you!$"
+	.string "senpai and beat you!$"
 
 Route117_Text_MegDefeat: @ 829CDE9
 	.string "MEG: Oh, no!\n"
@@ -2513,7 +2513,7 @@ Route117_Text_MegNotEnoughMons: @ 829CE52
 
 Route117_Text_AnnaRematchIntro: @ 829CEB6
 	.string "ANNA: I can't keep losing in front of\n"
-	.string "my junior partner, right?$"
+	.string "my kouhai, right?$"
 
 Route117_Text_AnnaRematchDefeat: @ 829CEF6
 	.string "ANNA: I couldn't get into the groove.$"
@@ -2529,14 +2529,14 @@ Route117_Text_AnnaRematchNotEnoughMons: @ 829CF6E
 
 Route117_Text_MegRematchIntro: @ 829CFAA
 	.string "MEG: I'm going to tag up with my\n"
-	.string "senior partner and win this time!$"
+	.string "senpai and win this time!$"
 
 Route117_Text_MegRematchDefeat: @ 829CFED
 	.string "MEG: Too strong!$"
 
 Route117_Text_MegPostRematch: @ 829CFFE
 	.string "MEG: I battled together with my\n"
-	.string "senior partner, but we lost…\p"
+	.string "senpai, but we lost…\p"
 	.string "That's so discouraging…$"
 
 Route117_Text_MegRematchNotEnoughMons: @ 829D053
@@ -2889,18 +2889,17 @@ Route119_Text_HideoPostBattle: @ 829E2A3
 	.string "to that.$"
 
 Route119_Text_ChrisIntro: @ 829E30D
-	.string "You spoke to me…\n"
-	.string "So you want to challenge me!\p"
-	.string "Sure! I'll try out the POKéMON I caught\n"
-	.string "while SURFING!$"
+	.string "I just found a super rare POKéMON\p"
+	.string "while SURFING!\p"
+	.string "Let's see how you fare against it!$"
 
 Route119_Text_ChrisDefeat: @ 829E372
-	.string "I don't have a clue about what it\n"
-	.string "takes to win.$"
+	.string "Win or lose, doesn't matter. End of\n
+	.string "the day, I've still got my FEEBAS!$"
 
 Route119_Text_ChrisPostBattle: @ 829E3A2
 	.string "Go for a SURF on my POKéMON…\p"
-	.string "Then fish off its back…\p"
+	.string "Cast my SUPER ROD off its back…\p"
 	.string "It's an indescribably luxuriant moment!$"
 
 Route119_Text_FabianIntro: @ 829E3FF
@@ -3199,17 +3198,16 @@ Route121_Text_TammyPostBattle: @ 829F3C6
 	.string "at work there…$"
 
 Route121_Text_KateIntro: @ 829F3FB
-	.string "KATE: Together, we're fearless!\n"
-	.string "We'll demonstrate how tough we are!$"
+	.string "KATE: Yawn… Oh, a trainer. Guess that\n"
+	.string "means we're battling, huh JOY?$"
 
 Route121_Text_KateDefeat: @ 829F43F
-	.string "KATE: I blew it in front of my junior\n"
-	.string "student partner…$"
+	.string "KATE: Huh, we lost… Yawn…\p"
+	.string "Well, that's a bummer.$"
 
 Route121_Text_KatePostBattle: @ 829F476
-	.string "KATE: When someone's relying on me,\n"
-	.string "I get this urge to look cool in front\l"
-	.string "of them…$"
+	.string "KATE: My kouhai is very… excitable.\n"
+	.string "Life hasn't drained her enthusiasm yet.$"
 
 Route121_Text_KateNotEnoughMons: @ 829F4C9
 	.string "KATE: If you've only got one POKéMON,\n"
@@ -3217,15 +3215,16 @@ Route121_Text_KateNotEnoughMons: @ 829F4C9
 	.string "That would be bullying.$"
 
 Route121_Text_JoyIntro: @ 829F521
-	.string "JOY: Together, we're fearless!\n"
-	.string "We'll demonstrate how tough we are!$"
+	.string "JOY: Omigosh! KATE! A trainer! Are we\n"
+	.string "about to battle! I can't wait!$"
 
 Route121_Text_JoyDefeat: @ 829F564
-	.string "JOY: Please forgive me, KATE!$"
+	.string "JOY: Oh no! We lost!\n"
+	.string "Please forgive me, KATE!$"
 
 Route121_Text_JoyPostBattle: @ 829F582
-	.string "JOY: Ehehe, I'll have to train with KATE,\n"
-	.string "my senior student partner, again.$"
+	.string "JOY: My senpai KATE is so cool!\n"
+	.string "She's always so cool and collected!$"
 
 Route121_Text_JoyNotEnoughMons: @ 829F5CE
 	.string "JOY: You need at least two POKéMON\n"
