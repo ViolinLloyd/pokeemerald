@@ -1696,7 +1696,7 @@
           "map": "MAP_ROUTE124",
           "base_label": "gRoute124",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 2,
             "mons": [
               {
                 "min_level": 5,
@@ -4618,7 +4618,7 @@
           "map": "MAP_ROUTE125",
           "base_label": "gRoute125",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 2,
             "mons": [
               {
                 "min_level": 5,
@@ -4707,7 +4707,7 @@
           "map": "MAP_ROUTE126",
           "base_label": "gRoute126",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 2,
             "mons": [
               {
                 "min_level": 5,
@@ -4796,7 +4796,7 @@
           "map": "MAP_ROUTE127",
           "base_label": "gRoute127",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 2,
             "mons": [
               {
                 "min_level": 5,
@@ -4885,7 +4885,7 @@
           "map": "MAP_ROUTE128",
           "base_label": "gRoute128",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 2,
             "mons": [
               {
                 "min_level": 5,
@@ -4974,7 +4974,7 @@
           "map": "MAP_ROUTE129",
           "base_label": "gRoute129",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 2,
             "mons": [
               {
                 "min_level": 5,
@@ -5128,7 +5128,7 @@
             ]
           },
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 2,
             "mons": [
               {
                 "min_level": 5,
@@ -5217,7 +5217,7 @@
           "map": "MAP_ROUTE131",
           "base_label": "gRoute131",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 2,
             "mons": [
               {
                 "min_level": 5,
@@ -5395,7 +5395,7 @@
           "map": "MAP_ROUTE133",
           "base_label": "gRoute133",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 2,
             "mons": [
               {
                 "min_level": 5,
@@ -5484,7 +5484,7 @@
           "map": "MAP_ROUTE134",
           "base_label": "gRoute134",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 2,
             "mons": [
               {
                 "min_level": 5,
