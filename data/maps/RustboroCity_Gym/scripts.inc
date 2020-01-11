@@ -227,7 +227,7 @@ RustboroCity_Gym_Text_RoxannePostBattle: @ 82139A7
 	.string "Since you are so strong, you should\n"
 	.string "challenge other GYM LEADERS.\p"
 	.string "By battling many TRAINERS, you should\n"
-	.string "learn many things."
+	.string "learn many things.\p"
 	.string "For your next challenge, I recommend\n"
 	.string "taking on BRAWLY in the DEWFORD GYM.\p"
 	.string "His fighting spirit is renowned all\n"
