@@ -3804,19 +3804,20 @@ Route125_Text_StanDefeat: @ 82A15C7
 	.string "I floundered…$"
 
 Route125_Text_StanPostBattle: @ 82A15D5
-	.string "I was blown away by HORSEA's charm,\n"
-	.string "so I started swimming, too.$"
+	.string "I was blown away by SPHEAL's charm!\n"
+	.string "I found this cutie in SHOAL CAVE.$"
 
 Route125_Text_TanyaIntro: @ 82A1615
-	.string "I'm tired of swimming.\n"
+	.string "I caught a cute POKéMON!\n"
 	.string "Are you up for a battle with me?$"
 
 Route125_Text_TanyaDefeat: @ 82A164D
 	.string "You're too much!$"
 
 Route125_Text_TanyaPostBattle: @ 82A165E
-	.string "Whew…\n"
-	.string "Which way is it to MOSSDEEP CITY?$"
+	.string "LUVDISC may not be the\n"
+	.string "strongest POKéMON, but it does\l"
+	.string "carry beautiful HEART SCALES!$"
 
 Route125_Text_SharonIntro: @ 82A1686
 	.string "How would you like to take on the\n"
