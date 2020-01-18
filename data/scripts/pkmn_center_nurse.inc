@@ -5,11 +5,7 @@ Common_EventScript_PkmnCenterNurse:: @ 827191E
     specialvar VAR_RESULT, CountPlayerTrainerStars
     compare VAR_RESULT, 4
     goto_if_eq EventScript_PkmnCenterNurse_GoldCard
-    msgbox gText_WouldYouLikeToRestYourPkmn, MSGBOX_YESNO
-    compare VAR_RESULT, YES
-    goto_if_eq EventScript_PkmnCenterNurse_HealPkmn
-    compare VAR_RESULT, NO
-    goto_if_eq EventScript_PkmnCenterNurse_Goodbye
+    call EventScript_PkmnCenterNurse_HealPkmn
     end
 
 EventScript_PkmnCenterNurse_Goodbye:: @ 8271954
@@ -19,10 +15,7 @@ EventScript_PkmnCenterNurse_Goodbye:: @ 8271954
 @ VAR_0x8004 is 1 when player has Gold Card; jumps are identical
 EventScript_PkmnCenterNurse_HealPkmn:: @ 827195A
     incrementgamestat GAME_STAT_USED_POKECENTER
-    compare VAR_0x8004, 0
-    call_if_eq EventScript_PkmnCenterNurse_IllTakeYourPkmn
-    compare VAR_0x8004, 1
-    call_if_eq EventScript_PkmnCenterNurse_IllTakeYourPkmn2
+    call EventScript_PkmnCenterNurse_IllTakeYourPkmn
     waitmessage
     call EventScript_PkmnCenterNurse_TakeAndHealPkmn
     goto_if_unset FLAG_POKERUS_EXPLAINED, EventScript_PkmnCenterNurse_CheckPokerus
@@ -31,10 +24,6 @@ EventScript_PkmnCenterNurse_HealPkmn:: @ 827195A
 
 EventScript_PkmnCenterNurse_IllTakeYourPkmn:: @ 8271987
     message gText_IllTakeYourPkmn
-    return
-
-EventScript_PkmnCenterNurse_IllTakeYourPkmn2:: @ 827198D
-    message gText_IllTakeYourPkmn2
     return
 
 EventScript_PkmnCenterNurse_TakeAndHealPkmn:: @ 8271993
@@ -118,9 +107,8 @@ EventScript_PkmnCenterNurse_GoldCard:: @ 8271A68
     return
 
 EventScript_PkmnCenterNurse_AskForUsual:: @ 8271AAC
-    msgbox gText_YouWantTheUsual, MSGBOX_YESNO
-    compare VAR_RESULT, YES
-    goto_if_eq EventScript_PkmnCenterNurse_GoldCardHealPkmn
+    msgbox gText_YouWantTheUsual, MSGBOX_DEFAULT
+    call EventScript_PkmnCenterNurse_GoldCardHealPkmn
     message gText_WeHopeToSeeYouAgain2
     return
 
