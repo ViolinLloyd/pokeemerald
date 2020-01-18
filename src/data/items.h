@@ -1312,15 +1312,15 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_063] =
+    [ITEM_TRADE_STONE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
+        .name = _("TRADE STONE"),
+        .itemId = ITEM_TRADE_STONE,
         .price = 0,
-        .description = sDummyDesc,
+        .description = sTradeStoneDesc,
         .pocket = POCKET_ITEMS,
-        .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = 1,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
