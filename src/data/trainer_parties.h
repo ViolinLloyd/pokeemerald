@@ -3701,7 +3701,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .lvl = 13,
     .species = SPECIES_LILEEP,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_INGRAIN, MOVE_ACID, MOVE_CONSTRICT, MOVE_ROCK_TOMB
+    .moves = MOVE_INGRAIN, MOVE_ACID, MOVE_ABSORB, MOVE_ROCK_TOMB
     },
     {
     .iv = 200,
@@ -3722,20 +3722,20 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     },
     {
     .iv = 150,
-    .lvl = 16,
+    .lvl = 17,
     .species = SPECIES_MEDITITE,
     .heldItem = ITEM_NONE,
     .moves = MOVE_FOCUS_PUNCH, MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_BULK_UP
     },
     {
-    .iv = 175,
+    .iv = 150,
     .lvl = 16,
     .species = SPECIES_HERACROSS,
     .heldItem = ITEM_NONE,
     .moves = MOVE_FURY_ATTACK, MOVE_BRICK_BREAK, MOVE_COUNTER, MOVE_BULK_UP
     },
     {
-    .iv = 200,
+    .iv = 150,
     .lvl = 18,
     .species = SPECIES_HARIYAMA,
     .heldItem = ITEM_NONE,
@@ -6758,12 +6758,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AmyAndLiv2[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GinaAndMia1[] = {
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 8,
     .species = SPECIES_SEEDOT,
     },
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 8,
     .species = SPECIES_LOTAD,
     }
 };
