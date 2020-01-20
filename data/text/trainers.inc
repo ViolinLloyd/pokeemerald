@@ -2894,7 +2894,7 @@ Route119_Text_ChrisIntro: @ 829E30D
 	.string "Let's see how you fare against it!$"
 
 Route119_Text_ChrisDefeat: @ 829E372
-	.string "Win or lose, doesn't matter. End of\n
+	.string "Win or lose, doesn't matter. End of\n"
 	.string "the day, I've still got my FEEBAS!$"
 
 Route119_Text_ChrisPostBattle: @ 829E3A2
