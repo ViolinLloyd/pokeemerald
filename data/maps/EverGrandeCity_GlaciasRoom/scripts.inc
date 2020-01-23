@@ -60,7 +60,7 @@ EverGrandeCity_GlaciasRoom_EventScript_Defeated:: @ 822849A
 	end
 
 EverGrandeCity_GlaciasRoom_Text_PreBattleSpeech: @ 82284AC
-	.string "Welcome, my name is GLACIA\n"
+	.string "Welcome. My name is GLACIA\n"
 	.string "of the ELITE FOUR.\p"
 	.string "I've traveled from afar to HOENN\n"
 	.string "so that I may hone my ice skills.\p"
@@ -79,6 +79,6 @@ EverGrandeCity_GlaciasRoom_Text_Defeat: @ 82285B4
 
 EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech: @ 8228640
 	.string "Advance to the next room.\p"
-	.string "And there, confirm the truly fearsome\n"
+	.string "And there, confront the truly fearsome\n"
 	.string "side of the POKéMON LEAGUE.$"
 

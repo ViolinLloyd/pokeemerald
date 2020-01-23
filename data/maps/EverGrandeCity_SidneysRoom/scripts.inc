@@ -68,7 +68,7 @@ EverGrandeCity_SidneysRoom_EventScript_Defeated:: @ 8227F95
 EverGrandeCity_SidneysRoom_Text_PreBattleSpeech: @ 8227FA7
 	.string "Welcome, challenger!\n"
 	.string "I'm SIDNEY of the ELITE FOUR.\p"
-	.string "I like that look you're giving me.\n"
+	.string "I like that look you're giving me!\n"
 	.string "I guess you'll give me a good match.\l"
 	.string "That's good! Looking real good!\p"
 	.string "All right! You and me, let's enjoy\n"
@@ -82,7 +82,7 @@ EverGrandeCity_SidneysRoom_Text_Defeat: @ 82280A2
 EverGrandeCity_SidneysRoom_Text_PostBattleSpeech: @ 82280EC
 	.string "Well, listen to what this loser has\n"
 	.string "to say.\p"
-	.string "You've got what it takes to go far.\n"
-	.string "Now, go on to the next room and enjoy\l"
-	.string "your next battle!$"
+	.string "You've got what it takes to go far,\n"
+	.string "kid. Now, go on to the next room and\l"
+	.string "enjoy your next battle!$"
 

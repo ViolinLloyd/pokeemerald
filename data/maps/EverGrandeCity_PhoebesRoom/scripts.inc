@@ -66,7 +66,7 @@ EverGrandeCity_PhoebesRoom_Text_PreBattleSpeech: @ 822820E
 	.string "While I trained, I gained the ability\n"
 	.string "to commune with GHOST-type POKéMON.\p"
 	.string "Yes, the bond I developed with POKéMON\n"
-	.string "is extremely tight.\p"
+	.string "of MT. PYRE is extremely tight.\p"
 	.string "So, come on, just try and see if you can\n"
 	.string "even inflict damage on my POKéMON!$"
 
