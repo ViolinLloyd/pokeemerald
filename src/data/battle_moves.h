@@ -4925,7 +4925,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGSROCK_AFFECTED,
-        .physicality = MOVE_PHYSICALITY_OTHER,
+        .physicality = MOVE_PHYSICALITY_SPECIAL,
     },
 
     [MOVE_WATER_PULSE] =
