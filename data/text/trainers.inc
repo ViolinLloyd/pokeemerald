@@ -1954,7 +1954,7 @@ Route114_Text_IvyDefeat: @ 829AFAC
 
 Route114_Text_IvyPostBattle: @ 829AFCF
 	.string "IVY: I started training POKéMON\n"
-	.string "because TYRA, my student mentor,\l"
+	.string "because TYRA, my senpai,\l"
 	.string "taught me!$"
 
 Route114_Text_IvyNotEnoughMons: @ 829B01B
@@ -2102,7 +2102,7 @@ Route115_Text_CyndyPostRematch: @ 829B737
 	.string "It must be that I love POKéMON.$"
 
 Route115_Text_HectorIntro: @ 829B78F
-	.string "I have a rare POKéMON!\n"
+	.string "I have some rare POKéMON!\n"
 	.string "Would you like me to show you?$"
 
 Route115_Text_HectorDefeat: @ 829B7C5
@@ -2110,7 +2110,7 @@ Route115_Text_HectorDefeat: @ 829B7C5
 	.string "You want my POKéMON, don't you?$"
 
 Route115_Text_HectorPostBattle: @ 829B7EA
-	.string "I have this rare POKéMON.\n"
+	.string "I have these rare POKéMON.\n"
 	.string "It's enough to keep me satisfied.$"
 
 Route115_Text_KyraIntro: @ 829B826
