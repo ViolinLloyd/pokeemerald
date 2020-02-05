@@ -3857,45 +3857,45 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
 static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
     {
     .iv = 200,
-    .lvl = 27,
+    .lvl = 28,
     .species = SPECIES_SPINDA,
     .heldItem = ITEM_NONE,
     .moves = MOVE_TEETER_DANCE, MOVE_PSYBEAM, MOVE_FACADE, MOVE_ENCORE
     },
     {
     .iv = 200,
-    .lvl = 28,
+    .lvl = 29,
     .species = SPECIES_LINOONE,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = MOVE_SLASH, MOVE_BELLY_DRUM, MOVE_FACADE, MOVE_REST
+    .moves = MOVE_SURF, MOVE_BELLY_DRUM, MOVE_FACADE, MOVE_REST
     },
     {
     .iv = 200,
-    .lvl = 29,
+    .lvl = 30,
     .species = SPECIES_WIGGLYTUFF,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = MOVE_SING, MOVE_DEFENSE_CURL, MOVE_DOUBLE_EDGE, MOVE_REST
+    .moves = MOVE_SING, MOVE_DEFENSE_CURL, MOVE_STRENGTH, MOVE_REST
     },
     {
     .iv = 200,
     .lvl = 30,
     .species = SPECIES_ZANGOOSE,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_SLASH, MOVE_CRUSH_CLAW, MOVE_FACADE, MOVE_SWORDS_DANCE
+    .moves = MOVE_SLASH, MOVE_AERIAL_ACE, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE
     },
     {
     .iv = 200,
     .lvl = 31,
     .species = SPECIES_EXPLOUD,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = MOVE_SUPERSONIC, MOVE_HYPER_VOICE, MOVE_REST, MOVE_SNORE
+    .moves = MOVE_SUPERSONIC, MOVE_EARTHQUAKE, MOVE_REST, MOVE_SNORE
     },
     {
     .iv = 250,
     .lvl = 32,
     .species = SPECIES_SLAKING,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = MOVE_SLACK_OFF, MOVE_YAWN, MOVE_FACADE, MOVE_DOUBLE_EDGE
+    .moves = MOVE_SLACK_OFF, MOVE_YAWN, MOVE_FACADE, MOVE_FAINT_ATTACK
     }
 };
 
@@ -10908,15 +10908,15 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Maxie3[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Pete[] = {
     {
     .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_TENTACOOL,
+    .lvl = 30,
+    .species = SPECIES_TENTACRUEL,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Isabelle[] = {
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 30,
     .species = SPECIES_MARILL,
     }
 };
