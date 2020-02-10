@@ -3316,18 +3316,16 @@ static const struct TrainerMonNoItemCustomMoves sParty_Jaclyn[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Hannah[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Hannah[] = {
     {
     .iv = 100,
     .lvl = 38,
-    .species = SPECIES_ALAKAZAM,
-    .moves = MOVE_PSYCHIC, MOVE_REFLECT, MOVE_RECOVER, MOVE_DISABLE
+    .species = SPECIES_ALAKAZAM
     },
     {
     .iv = 100,
     .lvl = 38,
-    .species = SPECIES_GOLDUCK,
-    .moves = MOVE_SURF, MOVE_PSYCHIC, MOVE_CROSS_CHOP, MOVE_BLIZZARD
+    .species = SPECIES_GOLDUCK
     }
 };
 
@@ -8463,18 +8461,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Cristian[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Sylvia[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Sylvia[] = {
     {
     .iv = 100,
     .lvl = 38,
-    .species = SPECIES_BANETTE,
-    .moves = MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_WILL_O_WISP, MOVE_PROTECT
+    .species = SPECIES_BANETTE
     },
     {
     .iv = 100,
     .lvl = 38,
-    .species = SPECIES_MEDICHAM,
-    .moves = MOVE_THUNDER_PUNCH, MOVE_HI_JUMP_KICK, MOVE_PSYCHIC, MOVE_SHADOW_BALL
+    .species = SPECIES_MEDICHAM
     }
 };
 
@@ -8553,18 +8549,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Nate[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Kathleen[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Kathleen[] = {
     {
     .iv = 100,
     .lvl = 36,
-    .species = SPECIES_CHIMECHO,
-    .moves = MOVE_PSYCHIC, MOVE_HEAL_BELL, MOVE_HYPNOSIS, MOVE_DREAM_EATER
+    .species = SPECIES_CHIMECHO
     },
     {
     .iv = 100,
     .lvl = 36,
-    .species = SPECIES_DUSCLOPS,
-    .moves = MOVE_PSYCHIC, MOVE_SHADOW_PUNCH, MOVE_FIRE_PUNCH, MOVE_DYNAMIC_PUNCH
+    .species = SPECIES_DUSCLOPS
     }
 };
 
@@ -8576,18 +8570,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Clifford[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Nicholas[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Nicholas[] = {
     {
     .iv = 100,
     .lvl = 36,
-    .species = SPECIES_CLAYDOL,
-    .moves = MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_ROCK_SLIDE, MOVE_HYPER_BEAM
+    .species = SPECIES_CLAYDOL
     },
     {
     .iv = 100,
     .lvl = 36,
-    .species = SPECIES_WOBBUFFET,
-    .moves = MOVE_COUNTER, MOVE_MIRROR_COAT, MOVE_DESTINY_BOND, MOVE_ENCORE
+    .species = SPECIES_WOBBUFFET
     }
 };
 
