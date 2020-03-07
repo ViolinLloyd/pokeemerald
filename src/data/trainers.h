@@ -1149,7 +1149,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_VITO] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_COOLTRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_COOLTRAINER_M,
@@ -3417,7 +3417,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_HANNAH] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_PSYCHIC,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_PSYCHIC_F,
@@ -3426,7 +3426,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Hannah),
-        .party = {.NoItemDefaultMoves = sParty_Hannah},
+        .party = {.NoItemCustomMoves = sParty_Hannah},
     },
 
     [TRAINER_SAMANTHA] =
@@ -5237,7 +5237,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_CAMDEN] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_TRIATHLETE,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
         .trainerPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
@@ -7996,9 +7996,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_MARC] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_HIKER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
         .trainerName = _("MARC"),
         .items = {},
         .doubleBattle = FALSE,
@@ -8051,7 +8051,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_SYLVIA] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_HEX_MANIAC,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
         .trainerPic = TRAINER_PIC_HEX_MANIAC,
@@ -8060,7 +8060,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Sylvia),
-        .party = {.NoItemDefaultMoves = sParty_Sylvia},
+        .party = {.NoItemCustomMoves = sParty_Sylvia},
     },
 
     [TRAINER_LEONARDO] =
@@ -8163,7 +8163,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_KATHLEEN] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_HEX_MANIAC,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
         .trainerPic = TRAINER_PIC_HEX_MANIAC,
@@ -8172,7 +8172,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Kathleen),
-        .party = {.NoItemDefaultMoves = sParty_Kathleen},
+        .party = {.NoItemCustomMoves = sParty_Kathleen},
     },
 
     [TRAINER_CLIFFORD] =
@@ -8191,7 +8191,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_NICHOLAS] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_PSYCHIC,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_PSYCHIC_M,
@@ -8200,7 +8200,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Nicholas),
-        .party = {.NoItemDefaultMoves = sParty_Nicholas},
+        .party = {.NoItemCustomMoves = sParty_Nicholas},
     },
 
     [TRAINER_GRUNT_SPACE_CENTER_3] =
